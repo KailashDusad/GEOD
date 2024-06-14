@@ -4,8 +4,9 @@ import logoBlack from '../assets/logo_black.png';
 
 const MyNavbar = () => {
     return (
-        <Navbar bg="light" expand="lg">
-            <Container>
+        <Navbar bg="light" expand="lg" >
+            <Container style={{display:'flex'}}>
+            <div>
           <Navbar.Brand href="#home">
             <img
               alt=""
@@ -16,14 +17,18 @@ const MyNavbar = () => {
             />{' '}
             GEOD
           </Navbar.Brand>
+          </div>
+          <div>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#" active>Home</Nav.Link>
-                        <Nav.Link href="#">People</Nav.Link>
-                        <Nav.Link href="#">Publication</Nav.Link>
-                        <Nav.Link href="#">Data</Nav.Link>
-                        <Nav.Link href="#" >Contact Us</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="research">Research Areas</Nav.Link>
+                        <Nav.Link href="/people">People</Nav.Link>
+                        <Nav.Link href="/publications">Publications</Nav.Link>
+                        <Nav.Link href="/data">Data</Nav.Link>
+                        <Nav.Link href="/gallery">Gallery</Nav.Link>
+                        <Nav.Link href="/contact" >Contact Us</Nav.Link>
                         {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -33,6 +38,7 @@ const MyNavbar = () => {
                         </NavDropdown> */}
                     </Nav>
                 </Navbar.Collapse>
+                </div>
             </Container>
         </Navbar>
     );
