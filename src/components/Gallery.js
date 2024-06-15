@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import image1 from '../images/img-1.jpg';
+import image1 from '../assets/someone1.jpg';
 import '../styles/Gallery.css';
 import MyNavbar from './Navbar';
 

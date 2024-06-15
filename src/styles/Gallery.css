@@ -39,7 +39,7 @@
   }
   
   .grid-gallery .grid-item a {
-    cursor:auto;
+    cursor:pointer;
   }
   
   .grid-gallery .grid-item:nth-child(3n - 2) {

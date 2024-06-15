@@ -1,99 +1,70 @@
-import React from 'react'
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import logoBlack from '../assets/logo_black.png';
+import name from '../assets/logo-no-background.png';
+import '../styles/Footer.css';
 
 const Footer = () => {
-  return (
-    <>
-      <footer className="footer-section">
-        <div className="footer-container">
-          <div className="footer-cta"></div>
-          <div className="footer-content">
-            <div className="grid-2">
-              <div className="footer-widget">
-                <div className="footer-logo">
-                  <img src="/water&amp;climate/static/media/logo.bda0098ba9a4b77c2fa7.png" className="img-fluid" alt="logo" />
-                </div>
-                <div className="footer-text">
-                  <p>
-                    Water and Climate Lab,<br />
-                    AB-4/326,<br />
-                    Indian Institute of Technology Gandhinagar.<br />
-                    Palaj, Gandhinagar, Gujarat, PIN - 382355.
-                  </p>
-                  <div style={{ display: 'none' }}>
-                    <a href="https://clustrmaps.com/site/1altr" title="Visit tracker">
-                      <img src="//clustrmaps.com/map_v2.png?cl=fefefe&amp;w=a&amp;t=tt&amp;d=KQmDGlOaW_hm7zhdeP4pOltsnWVrCY6umYLeRp1Re_M&amp;co=151414&amp;ct=fefefe" alt="Visitor map" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="footer-widget">
-                <div className="footer-widget-heading">
-                  <h3>Quick links</h3>
-                </div>
-                <ul>
-                  <li>
-                    <a aria-current="page" className="active" href="#/">
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://iitgn.ac.in/" target="_blank" rel="noreferrer">
-                      IITGN
-                    </a>
-                  </li>
-                  <li>
-                    <a className="" href="#/research">
-                      Research Areas
-                    </a>
-                  </li>
-                  <li>
-                    <a className="" href="#/publications">
-                      Publications
-                    </a>
-                  </li>
-                  <li>
-                    <a className="" href="#/data">
-                      Data
-                    </a>
-                  </li>
-                  <li>
-                    <a className="" href="#/people">
-                      People
-                    </a>
-                  </li>
-                  <li>
-                    <a className="" href="#/news">
-                      News
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://indiadroughtmonitor.in/" target="_blank" rel="noreferrer">
-                      India Drought Monitor
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://geoportalofindiandams.github.io/GeoID/" target="_blank" rel="noreferrer">
-                      Geoportal of Indian Dams (GeoID)
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://sites.google.com/iitgn.ac.in/expforecastlandsurfaceproducts/home?authuser=0" target="_blank" rel="noreferrer">
-                      EFLSP (IMD)
-                    </a>
-                  </li>
-                  <li>
-                    <a className="" href="#/contact">
-                      Contact Us
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </>
-  )
-}
+    return (
+        <footer className="footer bg-light">
+            <Container>
+                <Row className="pt-4">
+                    <Col md={6} className="text-md-left">
+                        <img
+                            alt="name"
+                            src={name}
+                            width="100"
+                            height="50"
+                            className="d-inline-block align-top"
+                        />
+                        <img
+                            style={{marginLeft:'7px'}}
+                            alt="logo"
+                            src={logoBlack}
+                            width="50"
+                            height="50"
+                            className="d-inline-block align-top ml-2"
+                        />
+                        <p className="mt-2">
+                            GEOD,<br />
+                            AB-12/406,<br />
+                            Indian Institute of Technology Gandhinagar,<br />
+                            Palaj, Gandhinagar, Gujarat, PIN - 382355.
+                        </p>
+                    </Col>
+                    <Col md={6}>
+                        <Row>
+                            <Col md={4} xs={6}>
+                                <h6>Quick links</h6>
+                                <ul className="list-unstyled">
+                                    <li><a className='hvr-underline-from-center-footer' href="/">Home</a></li>
+                                    <li><a className='hvr-underline-from-center-footer' href="/research">Research Areas</a></li>
+                                    <li><a className='hvr-underline-from-center-footer' href="/data">Data</a></li>
+                                    <li><a className='hvr-underline-from-center-footer' href="#">News</a></li>
+                                    {/* <li><a href="#">Geoportal Of Indian Dams (GeoID)</a></li> */}
+                                    <li><a className='hvr-underline-from-center-footer' href="/contact">Contact Us</a></li>
+                                </ul>
+                            </Col>
+                            <Col md={4} xs={6}>
+                                <ul className="list-unstyled mt-md-4">
+                                    <li><a className='hvr-underline-from-center-footer' href="/iitgn">IITGN</a></li>
+                                    <li><a className='hvr-underline-from-center-footer' href="/publications">Publications</a></li>
+                                    <li><a className='hvr-underline-from-center-footer' href="/people">People</a></li>
+                                    {/* <li><a href="/drought-monitor">India Drought Monitor</a></li> */}
+                                    {/* <li><a href="/eflsp">EFLSP (IMD)</a></li> */}
+                                </ul>
+                            </Col>
+                        </Row>
+                    </Col>
+                </Row>
+                <Row className="mt-3 text-center">
+                    <Col>
+                        <p className="mb-0">© 2024 GEOD IITGN. All rights reserved</p>
+                    </Col>
+                </Row>
+            </Container>
+        </footer>
+    );
+};
 
-export default Footer
+export default Footer;
