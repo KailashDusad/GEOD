@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import image1 from '../assets/someone1.jpg';
 import '../styles/Gallery.css';
 import MyNavbar from './Navbar';
+import images from './Images';
+
 
 const Gallery = () => {
   useEffect(() => {
-    // Initialize Lightbox2
     if (window.lightbox) {
       window.lightbox.init();
     }
@@ -15,10 +15,10 @@ const Gallery = () => {
     <>
       <MyNavbar />
       <div className="grid-gallery">
-        {[...Array(18)].map((_, index) => (
+        {images.map((image, index) => (
           <div className="grid-item" key={index}>
-            <a href={image1} data-lightbox="gridImage">
-              <img src={image1} alt={`Image ${index + 1}`} />
+            <a href={image.src} data-lightbox="gridImage">
+              <img src={image.src} alt={image.caption} />
             </a>
           </div>
         ))}
@@ -26,5 +26,6 @@ const Gallery = () => {
     </>
   );
 };
+
 
 export default Gallery;

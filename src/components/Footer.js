@@ -6,7 +6,8 @@ import '../styles/Footer.css';
 
 const Footer = () => {
     return (
-        <footer className="footer bg-light">
+        <>
+        {/* <footer className="footer bg-light">
             <Container>
                 <Row className="pt-4">
                     <Col md={6} className="text-md-left">
@@ -41,7 +42,6 @@ const Footer = () => {
                                     <li><a className='hvr-underline-from-center-footer' href="/research">Research Areas</a></li>
                                     <li><a className='hvr-underline-from-center-footer' href="/data">Data</a></li>
                                     <li><a className='hvr-underline-from-center-footer' href="#">News</a></li>
-                                    {/* <li><a href="#">Geoportal Of Indian Dams (GeoID)</a></li> */}
                                     <li><a className='hvr-underline-from-center-footer' href="/contact">Contact Us</a></li>
                                 </ul>
                             </Col>
@@ -50,8 +50,8 @@ const Footer = () => {
                                     <li><a className='hvr-underline-from-center-footer' href="/iitgn">IITGN</a></li>
                                     <li><a className='hvr-underline-from-center-footer' href="/publications">Publications</a></li>
                                     <li><a className='hvr-underline-from-center-footer' href="/people">People</a></li>
-                                    {/* <li><a href="/drought-monitor">India Drought Monitor</a></li> */}
-                                    {/* <li><a href="/eflsp">EFLSP (IMD)</a></li> */}
+                                    <li><a href="/drought-monitor">India Drought Monitor</a></li>
+                                    <li><a href="/eflsp">EFLSP (IMD)</a></li>
                                 </ul>
                             </Col>
                         </Row>
@@ -63,7 +63,8 @@ const Footer = () => {
                     </Col>
                 </Row>
             </Container>
-        </footer>
+        </footer> */}
+        </>
     );
 };
 
