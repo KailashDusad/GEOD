@@ -1,0 +1,35 @@
+.stats-border-bottom:before {
+    position: absolute;
+    margin: auto;
+    z-index: 1;
+    content: "";
+    width: 75%;
+    height: 2px;
+    background: #4597a8;
+    bottom: -9px;
+    left: 12.5%;
+}
+.stats-border-bottom1:before {
+    position: absolute;
+    margin: auto;
+    z-index: 1;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #4597a8;
+    bottom: -6px;
+    /* left: 12.5%; */
+}
+.h-5 {
+    margin-bottom: 15px;
+    /* color: #444444; */
+    color: black;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    /* margin-bottom: 30px; */
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+    margin-top: 20px;
+}

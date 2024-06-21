@@ -8,7 +8,7 @@ const MyNavbar = () => {
     return (
         <Navbar bg="light" expand="lg" >
             <Container style={{display:'flex'}}>
-            <div>
+            
           <Navbar.Brand href="/">
               <img
                 alt=""
@@ -28,18 +28,17 @@ const MyNavbar = () => {
             
             
           </Navbar.Brand>
-          </div>
-          <div>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link className='hvr-underline-from-center' style={{color:'black'}} href="/">Home</Nav.Link>
-                        <Nav.Link className='hvr-underline-from-center' style={{color:'black'}} href="research">Research Areas</Nav.Link>
-                        <Nav.Link className='hvr-underline-from-center' style={{color:'black'}} href="/people">People</Nav.Link>
-                        <Nav.Link className='hvr-underline-from-center' style={{color:'black'}} href="/publications">Publications</Nav.Link>
-                        <Nav.Link className='hvr-underline-from-center' style={{color:'black'}} href="/data">Data</Nav.Link>
-                        <Nav.Link className='hvr-underline-from-center' style={{color:'black'}} href="/gallery">Gallery</Nav.Link>
-                        <Nav.Link className='hvr-underline-from-center' style={{color:'black'}} href="/contact" >Contact Us</Nav.Link>
+                        <Nav.Link className='hvr-underline-from-center' style={{color:'black', fontSize:'1rem'}} href="/">Home</Nav.Link>
+                        <Nav.Link className='hvr-underline-from-center' style={{color:'black', fontSize:'1rem'}} href="research">Research Areas</Nav.Link>
+                        <Nav.Link className='hvr-underline-from-center' style={{color:'black', fontSize:'1rem'}} href="/people">People</Nav.Link>
+                        <Nav.Link className='hvr-underline-from-center' style={{color:'black', fontSize:'1rem'}} href="/publications">Publications</Nav.Link>
+                        <Nav.Link className='hvr-underline-from-center' style={{color:'black', fontSize:'1rem'}} href="/data">Data</Nav.Link>
+                        <Nav.Link className='hvr-underline-from-center' style={{color:'black', fontSize:'1rem'}} href="/gallery">Gallery</Nav.Link>
+                        <Nav.Link className='hvr-underline-from-center' style={{color:'black', fontSize:'1rem'}} href="/contact" >Contact Us</Nav.Link>
                         {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -49,7 +48,7 @@ const MyNavbar = () => {
                         </NavDropdown> */}
                     </Nav>
                 </Navbar.Collapse>
-                </div>
+                
             </Container>
         </Navbar>
     );

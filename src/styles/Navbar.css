@@ -28,3 +28,9 @@
     left: 0;
     right: 0;
   }
+
+@media (min-width: 989px) {
+  #basic-navbar-nav {
+    margin-left: 25rem;
+  }
+}

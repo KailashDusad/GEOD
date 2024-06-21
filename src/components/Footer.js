@@ -7,7 +7,7 @@ import '../styles/Footer.css';
 const Footer = () => {
     return (
         <>
-        {/* <footer className="footer bg-light">
+        <footer className="footer bg-light">
             <Container>
                 <Row className="pt-4">
                     <Col md={6} className="text-md-left">
@@ -63,7 +63,7 @@ const Footer = () => {
                     </Col>
                 </Row>
             </Container>
-        </footer> */}
+        </footer>
         </>
     );
 };
