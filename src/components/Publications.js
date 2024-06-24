@@ -4,6 +4,7 @@ import publicationData from './PublicationData';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import Heading from './Heading';
 import '../styles/Publications.css';
+import Footer from './Footer';
 
 const Publications = () => {
   return (
@@ -28,6 +29,7 @@ const Publications = () => {
           ))}
         </Row>
       </Container>
+      <Footer />
     </>
   );
 };

@@ -4,6 +4,7 @@ import Dataset from './Dataset';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import Heading from './Heading';
 import '../styles/Data.css';
+import Footer from './Footer';
 
 const Data = () => {
   return (
@@ -20,13 +21,14 @@ const Data = () => {
                   <Card.Title>{dataset.title}</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">Lead: {dataset.lead}</Card.Subtitle>
                   <Card.Text>{dataset.description}</Card.Text>
-                  <Button variant="primary" href={dataset.link}>View Dataset</Button>
+                  <Button variant="primary" href={`/datasets/${index}`}>View Dataset</Button> {/* Updated href */}
                 </Card.Body>
               </Card>
             </Col>
           ))}
         </Row>
       </Container>
+      <Footer />
     </>
   );
 };

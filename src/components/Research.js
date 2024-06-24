@@ -4,6 +4,7 @@ import ResearchData from './ResearchData';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import Heading from './Heading';
 import '../styles/Research.css'; 
+import Footer from './Footer';
 
 const Research = () => {
   return (
@@ -26,6 +27,8 @@ const Research = () => {
           ))}
         </Row>
       </Container>
+      <Footer />
+
     </>
   );
 };

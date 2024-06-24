@@ -1,0 +1,35 @@
+
+.detail-card1 {
+    border: none;
+    border-radius: 15px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-img-top1 {
+    border-radius: 15px;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  .card-subtitle {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #495057;
+    margin-top: 1rem;
+  }
+  
+  .button {
+    margin-top: 20px;
+  }
+  
