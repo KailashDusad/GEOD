@@ -1,10 +1,10 @@
-import dakshu from '../team/dakshu.jpg'
-import jagroop from '../team/jagroop.jpg'
-import omkar from '../team/omkar.jpg'
-import parvee from '../team/parvee.png'
-import saurabh from '../team/saurabh.jpg'
-import sikha from '../team/sikha.png'
-import virat from '../team/virat.jpg'
+// import dakshu from '../team/dakshu.jpg'
+// import jagroop from '../team/jagroop.jpg'
+// import omkar from '../team/omkar.jpg'
+// import parvee from '../team/parvee.png'
+// import saurabh from '../team/saurabh.jpg'
+// import sikha from '../team/sikha.png'
+// import virat from '../team/virat.jpg'
 
 
 // // import img1 from '../assets/someone1.jpg'

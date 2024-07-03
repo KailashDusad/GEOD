@@ -18,7 +18,8 @@ const Research = () => {
           {ResearchData.map((project, index) => (
             <Col key={index} xs={12} md={6} lg={4}>
               <Card className="research-card h-100">
-                <Card.Img variant="top" src={project.image} alt={project.title} className="card-img-top" />
+                {/* <Card.Img variant="top" src={project.image} alt={project.title} className="card-img-top" /> */}
+                <Card.Img variant="top" src={require(`../assets/${project.image}.${project.type}`)} alt={project.title} className="card-img-top" />
                 <Card.Body>
                   <Card.Title>{project.title}</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">Lead: {project.lead}</Card.Subtitle>

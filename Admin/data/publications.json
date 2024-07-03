@@ -5,7 +5,8 @@
         "journal": "Journal of AI Research",
         "year": 2022,
         "description": "An in-depth look at the latest advancements in artificial intelligence.",
-        "image": "img7"
+        "image": "monu4",
+        "type": "jpg"
       },
       {
         "title": "Renewable Energy Innovations",
@@ -13,7 +14,8 @@
         "journal": "Renewable Energy Journal",
         "year": 2021,
         "description": "Exploring the latest innovations in renewable energy technologies.",
-        "image": "img8"
+        "image": "monu5",
+        "type": "jpg"
       },
       {
         "title": "Quantum Computing Breakthroughs",
@@ -21,6 +23,7 @@
         "journal": "Quantum Computing Journal",
         "year": 2023,
         "description": "Recent breakthroughs in the field of quantum computing.",
-        "image": "img9"
+        "image": "monu6",
+        "type": "jpg"
       }
 ]

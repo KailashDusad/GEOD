@@ -13,6 +13,23 @@ const DatasetDetail = () => {
   const { id } = useParams();
   const dataset = Dataset[id];
 
+  if (!dataset) {
+    return (
+      <>
+        <MyNavbar />
+        <Heading headingText="Dataset Not Found" />
+        <Container className="my-5">
+          <Row>
+            <Col>
+              <p>The dataset you are looking for does not exist.</p>
+            </Col>
+          </Row>
+        </Container>
+        <Footer />
+      </>
+    );
+  }
+
   return (
     <>
       <MyNavbar />
@@ -20,7 +37,8 @@ const DatasetDetail = () => {
       <Container className="my-5">
         <Row>
           <Col xs={12} md={6}>
-            <Card.Img variant="top" src={dataset.image} alt={dataset.title} className="card-img-top1 mb-4" />
+            {/* <Card.Img variant="top" src={dataset.image} alt={dataset.title} className="card-img-top1 mb-4" /> */}
+            <Card.Img variant="top" src={require(`../assets/${dataset.image}.${dataset.type}`)} alt={dataset.title} className="card-img-top1 mb-4" />
           </Col>
           <Col xs={12} md={6}>
             <Card className="detail-card1">
