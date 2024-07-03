@@ -2,12 +2,14 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import MyNavbar from './Navbar';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import Dataset from './Dataset';
+// import Dataset from './Dataset';
+import useDataset from './Dataset';
 import Heading from './Heading';
 import '../styles/DatasetDetail.css';
-import Footer from './Footer';
+import Footer from './Footer'; 
 
 const DatasetDetail = () => {
+  const Dataset = useDataset();
   const { id } = useParams();
   const dataset = Dataset[id];
 

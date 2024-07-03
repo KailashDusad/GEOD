@@ -1,12 +1,14 @@
 import React from 'react';
 import MyNavbar from './Navbar';
-import Dataset from './Dataset';
+// import Dataset from './Dataset';
+import useDataset from './Dataset';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import Heading from './Heading';
 import '../styles/Data.css';
 import Footer from './Footer';
 
 const Data = () => {
+  const Dataset = useDataset();
   return (
     <>
       <MyNavbar />

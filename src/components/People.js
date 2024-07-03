@@ -3,8 +3,17 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Heading from './Heading';
-import TeamInfo from './TeamInfo';
+// import TeamInfo from './TeamInfo';
+import useTeamInfo from './TeamInfo';
+import dakshu from '../team/dakshu.jpg'
+import jagroop from '../team/jagroop.jpg'
+import omkar from '../team/omkar.jpg'
+import parvee from '../team/parvee.png'
+import saurabh from '../team/saurabh.jpg'
+import sikha from '../team/sikha.png'
+// import virat from '../team/virat.jpg'
 const Team = () => {
+  const TeamInfo = useTeamInfo();
   return (
     <>
     <Navbar />

@@ -1,12 +1,14 @@
 import React from 'react';
 import MyNavbar from './Navbar';
-import ResearchData from './ResearchData';
+// import ResearchData from './ResearchData';
+import useReasearch from './ResearchData';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import Heading from './Heading';
 import '../styles/Research.css'; 
 import Footer from './Footer';
 
 const Research = () => {
+  const ResearchData = useReasearch();
   return (
     <>
       <MyNavbar />

@@ -8,7 +8,7 @@ const app = express();
 const PORT = 5000;
 
 app.use(bodyParser.json());
-app.use(cors());  // Enable CORS for all routes
+app.use(cors()); 
 
 app.post('/api/add-content', (req, res) => {
   const { type, data } = req.body;
@@ -51,6 +51,38 @@ app.post('/api/add-content', (req, res) => {
       if (err) return res.status(500).send('Error writing to file');
       res.send('Content added successfully');
     });
+  });
+});
+
+app.get('/api/team', (req, res) => {
+  const filePath = path.join(__dirname, 'data', 'team.json');
+  fs.readFile(filePath, 'utf8', (err, fileData) => {
+    if (err) return res.status(500).send('Error reading file');
+    res.send(fileData);
+  });
+});
+
+app.get('/api/research', (req, res) => {
+  const filePath = path.join(__dirname, 'data', 'research.json');
+  fs.readFile(filePath, 'utf8', (err, fileData) => {
+    if (err) return res.status(500).send('Error reading file');
+    res.send(fileData);
+  });
+});
+
+app.get('/api/datasets', (req, res) => {
+  const filePath = path.join(__dirname, 'data', 'datasets.json');
+  fs.readFile(filePath, 'utf8', (err, fileData) => {
+    if (err) return res.status(500).send('Error reading file');
+    res.send(fileData);
+  });
+});
+
+app.get('/api/publications', (req, res) => {
+  const filePath = path.join(__dirname, 'data', 'publications.json');
+  fs.readFile(filePath, 'utf8', (err, fileData) => {
+    if (err) return res.status(500).send('Error reading file');
+    res.send(fileData);
   });
 });
 
