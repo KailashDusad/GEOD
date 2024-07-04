@@ -11,6 +11,7 @@ import Publications from './components/Publications';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DatasetDetail from './components/DatasetDetail';
 import AdminForm from './components/AdminForm';
+import CheckA from './components/CheckA';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/datasets/:id' element={<DatasetDetail />} />
         <Route path='/admin' element={<AdminForm />} />
+        <Route path='/check' element={<CheckA />} />
       </Routes>
     </Router>
     {/* <Footer /> */}
