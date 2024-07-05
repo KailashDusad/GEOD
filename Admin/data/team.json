@@ -1,58 +1,50 @@
 [
   {
-    "id": 1,
     "name": "Virat Upadhyay",
     "position": "PhD Student",
-    "image": "virat",
-    "type": "jpg",
+    "image": "virat.jpg",
     "description": "Topographic affect of Earthquake, Engineering Seismology, Earthquake Induced Landslides"
   },
   {
-    "id": 2,
     "name": "Omkar",
     "position": "PhD Student",
-    "image": "omkar",
-    "type": "jpg",
+    "image": "omkar.jpg",
     "description": "Seismology, Statistical Seismology, Engineering Seismology, Optimisation, Ground Motion Modelling, Ground Motion Simulation"
   },
   {
-    "id": 3,
     "name": "Jagroop SIngh",
     "position": "Masters",
-    "image": "jagroop",
-    "type": "jpg",
+    "image": "jagroop.jpg",
     "description": "Geodynamic Modeling"
   },
   {
-    "id": 4,
     "name": "Dakshata Suresh bhamare",
     "position": "Masters",
-    "image": "dakshu",
-    "type": "jpg",
+    "image": "dakshu.jpg",
     "description": "Statistical or engineering seismology"
   },
   {
-    "id": 5,
     "name": "Saurabh Choubey",
     "position": "PhD Student",
-    "image": "saurabh",
-    "type": "jpg",
+    "image": "saurabh.jpg",
     "description": "Numerical Geodynamic Modeling"
   },
   {
-    "id": 6,
     "name": "Shikha Sharma",
     "position": "PhD Student",
-    "image": "sikha",
-    "type": "png",
+    "image": "sikha.png",
     "description": "Seismology, Earthquake Engineering Ground Motion, Seismic Hazard Analysis, Earthquake Seismology"
   },
   {
-    "id": 7,
     "name": "Parvee",
     "position": "PhD Student",
-    "image": "parvee",
-    "type": "png",
+    "image": "parvee.png",
     "description": "Seismic Interpretation and Geodynamic Modelling"
+  },
+  {
+    "name": "Kailash Dusad",
+    "position": "webmaster",
+    "description": "KD Bhai",
+    "image": "Kailash Dusad.jpg"
   }
 ]

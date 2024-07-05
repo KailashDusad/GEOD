@@ -1,24 +1,26 @@
 [
-
-    {
-        "title": "AI in Healthcare",
-        "lead": "Dr. John Doe",
-        "description": "A project exploring the applications of artificial intelligence in the healthcare industry.",
-        "image": "monu4",
-        "type": "jpg"
-      },
-      {
-        "title": "Renewable Energy Sources",
-        "lead": "Dr. Jane Smith",
-        "description": "Researching new and innovative renewable energy sources to combat climate change.",
-        "image": "monu5",
-        "type": "jpg"
-      },
-      {
-        "title": "Quantum Computing",
-        "lead": "Dr. Emily Johnson",
-        "description": "Investigating the potential of quantum computing and its future applications.",
-        "image": "monu6",
-        "type": "jpg"
-      }
+  {
+    "title": "AI in Healthcare",
+    "lead": "Dr. John Doe",
+    "description": "A project exploring the applications of artificial intelligence in the healthcare industry.",
+    "image": "monu4.jpg"
+  },
+  {
+    "title": "Renewable Energy Sources",
+    "lead": "Dr. Jane Smith",
+    "description": "Researching new and innovative renewable energy sources to combat climate change.",
+    "image": "monu5.jpg"
+  },
+  {
+    "title": "Quantum Computing",
+    "lead": "Dr. Emily Johnson",
+    "description": "Investigating the potential of quantum computing and its future applications.",
+    "image": "monu6.jpg"
+  },
+  {
+    "title": "Kd on test",
+    "description": "Testing the json",
+    "lead": "Bhai",
+    "image": "Kd on test.jpg"
+  }
 ]

@@ -38,7 +38,7 @@ const DatasetDetail = () => {
         <Row>
           <Col xs={12} md={6}>
             {/* <Card.Img variant="top" src={dataset.image} alt={dataset.title} className="card-img-top1 mb-4" /> */}
-            <Card.Img variant="top" src={require(`../assets/${dataset.image}.${dataset.type}`)} alt={dataset.title} className="card-img-top1 mb-4" />
+            <Card.Img variant="top" src={require(`../assets/${dataset.image}`)} alt={dataset.title} className="card-img-top1 mb-4" />
           </Col>
           <Col xs={12} md={6}>
             <Card className="detail-card1">

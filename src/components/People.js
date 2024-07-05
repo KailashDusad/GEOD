@@ -24,7 +24,7 @@ const Team = () => {
         {TeamInfo.map((member, index) => (
           <Col key={index} xs={12} md={6} lg={4} className="mb-4">
             <Card>
-              <Card.Img variant="top" style={{height:'400px'}} src={require(`../team/${member.image}.${member.type}`)} alt={member.name} />
+              <Card.Img variant="top" style={{height:'400px'}} src={require(`../team/${member.image}`)} alt={member.name} />
               {/* <Card.Img variant="top" style={{height:'400px'}} src={member.image} alt={member.name} /> */}
               <Card.Body>
                 <Card.Title>{member.name}</Card.Title>

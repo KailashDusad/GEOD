@@ -19,7 +19,7 @@ const Publications = () => {
             <Col key={index} xs={12} md={6} lg={4}>
               <Card className="publication-card h-100">
                 {/* <Card.Img variant="top" src={publication.image} alt={publication.title} className="card-img-top" /> */}
-                <Card.Img variant="top" src={require(`../assets/${publication.image}.${publication.type}`)} alt={publication.title} className="card-img-top" />
+                <Card.Img variant="top" src={require(`../assets/${publication.image}`)} alt={publication.title} className="card-img-top" />
                 <Card.Body>
                   <Card.Title>{publication.title}</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">{publication.authors}</Card.Subtitle>

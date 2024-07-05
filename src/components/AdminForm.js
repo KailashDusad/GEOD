@@ -7,10 +7,12 @@ import '../styles/AdminForm.css';
 const AdminForm = () => {
   const [selectedOption, setSelectedOption] = useState('');
   const [formData, setFormData] = useState({});
+  const [imageFile, setImageFile] = useState(null);
 
   const handleOptionChange = (e) => {
     setSelectedOption(e.target.value);
     setFormData({});
+    setImageFile(null);
   };
 
   const handleInputChange = (e) => {
@@ -18,16 +20,34 @@ const AdminForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const handleFileChange = (e) => {
+    setImageFile(e.target.files[0]);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const data = new FormData();
+    data.append('type', selectedOption);
+    data.append('data', JSON.stringify(formData));
+    if (imageFile) {
+      data.append('image', imageFile);
+    }
+
+    // Debug: Log the FormData contents
+    for (const pair of data.entries()) {
+      console.log(`${pair[0]}: ${pair[1]}`);
+    }
+
     try {
-      await axios.post('http://localhost:5000/api/add-content', {
-        type: selectedOption,
-        data: formData,
+      await axios.post('http://localhost:5000/api/add-content', data, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
       });
       alert('Content added successfully');
       setSelectedOption('');
       setFormData({});
+      setImageFile(null);
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('Failed to add content');
@@ -49,90 +69,24 @@ const AdminForm = () => {
               />
             </Form.Group>
             <Form.Group controlId="formRole">
-              <Form.Label>Role</Form.Label>
+              <Form.Label>Position</Form.Label>
               <Form.Control
                 type="text"
-                name="role"
-                value={formData.role || ''}
+                name="position"
+                value={formData.position || ''}
                 onChange={handleInputChange}
               />
             </Form.Group>
             <Form.Group controlId="formImage">
-              <Form.Label>Image URL</Form.Label>
+              <Form.Label>Image</Form.Label>
               <Form.Control
-                type="text"
+                type="file"
                 name="image"
-                value={formData.image || ''}
-                onChange={handleInputChange}
+                onChange={handleFileChange}
               />
             </Form.Group>
+            
             <Form.Group controlId="formBio">
-              <Form.Label>Bio</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={3}
-                name="bio"
-                value={formData.bio || ''}
-                onChange={handleInputChange}
-              />
-            </Form.Group>
-          </>
-        );
-      case 'research':
-        return (
-          <>
-            <Form.Group controlId="formTitle">
-              <Form.Label>Title</Form.Label>
-              <Form.Control
-                type="text"
-                name="title"
-                value={formData.title || ''}
-                onChange={handleInputChange}
-              />
-            </Form.Group>
-            <Form.Group controlId="formSummary">
-              <Form.Label>Summary</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={3}
-                name="summary"
-                value={formData.summary || ''}
-                onChange={handleInputChange}
-              />
-            </Form.Group>
-            <Form.Group controlId="formLead">
-              <Form.Label>Lead</Form.Label>
-              <Form.Control
-                type="text"
-                name="lead"
-                value={formData.lead || ''}
-                onChange={handleInputChange}
-              />
-            </Form.Group>
-            <Form.Group controlId="formImage">
-              <Form.Label>Image URL</Form.Label>
-              <Form.Control
-                type="text"
-                name="image"
-                value={formData.image || ''}
-                onChange={handleInputChange}
-              />
-            </Form.Group>
-          </>
-        );
-      case 'dataset':
-        return (
-          <>
-            <Form.Group controlId="formTitle">
-              <Form.Label>Title</Form.Label>
-              <Form.Control
-                type="text"
-                name="title"
-                value={formData.title || ''}
-                onChange={handleInputChange}
-              />
-            </Form.Group>
-            <Form.Group controlId="formDescription">
               <Form.Label>Description</Form.Label>
               <Form.Control
                 as="textarea"
@@ -142,75 +96,158 @@ const AdminForm = () => {
                 onChange={handleInputChange}
               />
             </Form.Group>
-            <Form.Group controlId="formLead">
-              <Form.Label>Lead</Form.Label>
-              <Form.Control
-                type="text"
-                name="lead"
-                value={formData.lead || ''}
-                onChange={handleInputChange}
-              />
-            </Form.Group>
-            <Form.Group controlId="formImage">
-              <Form.Label>Image URL</Form.Label>
-              <Form.Control
-                type="text"
-                name="image"
-                value={formData.image || ''}
-                onChange={handleInputChange}
-              />
-            </Form.Group>
           </>
         );
-      case 'publication':
-        return (
-          <>
-            <Form.Group controlId="formTitle">
-              <Form.Label>Title</Form.Label>
+        case 'research':
+          return (
+            <>
+              <Form.Group controlId="formTitle">
+                <Form.Label>Title</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="title"
+                  value={formData.title || ''}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+              <Form.Group controlId="formSummary">
+                <Form.Label>Summary</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  name="description"
+                  value={formData.description || ''}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+              <Form.Group controlId="formLead">
+                <Form.Label>Lead</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="lead"
+                  value={formData.lead || ''}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+              <Form.Group controlId="formImage">
+              <Form.Label>Image</Form.Label>
               <Form.Control
-                type="text"
-                name="title"
-                value={formData.title || ''}
-                onChange={handleInputChange}
+                type="file"
+                name="image"
+                onChange={handleFileChange}
               />
             </Form.Group>
-            <Form.Group controlId="formAuthors">
-              <Form.Label>Authors</Form.Label>
+            </>
+          );
+        case 'dataset':
+          return (
+            <>
+              <Form.Group controlId="formTitle">
+                <Form.Label>Title</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="title"
+                  value={formData.title || ''}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+              <Form.Group controlId="formDescription">
+                <Form.Label>Description</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  name="description"
+                  value={formData.description || ''}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+              <Form.Group controlId="formLead">
+                <Form.Label>Lead</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="lead"
+                  value={formData.lead || ''}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+              <Form.Group controlId="formImage">
+              <Form.Label>Image</Form.Label>
               <Form.Control
-                type="text"
-                name="authors"
-                value={formData.authors || ''}
-                onChange={handleInputChange}
+                type="file"
+                name="image"
+                onChange={handleFileChange}
               />
             </Form.Group>
-            <Form.Group controlId="formJournal">
-              <Form.Label>Journal</Form.Label>
+              <Form.Group controlId="formLink">
+                <Form.Label>Link</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="link"
+                  value={formData.link || ''}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+            </>
+          );
+        case 'publication':
+          return (
+            <>
+              <Form.Group controlId="formTitle">
+                <Form.Label>Title</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="title"
+                  value={formData.title || ''}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+              <Form.Group controlId="formAuthors">
+                <Form.Label>Authors</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="authors"
+                  value={formData.authors || ''}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+              <Form.Group controlId="formJournal">
+                <Form.Label>Journal</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="journal"
+                  value={formData.journal || ''}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+              <Form.Group controlId="formYear">
+                <Form.Label>Year</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="year"
+                  value={formData.year || ''}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+              <Form.Group controlId="formDescription">
+                <Form.Label>Description</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  name="description"
+                  value={formData.description || ''}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+              <Form.Group controlId="formImage">
+              <Form.Label>Image</Form.Label>
               <Form.Control
-                type="text"
-                name="journal"
-                value={formData.journal || ''}
-                onChange={handleInputChange}
+                type="file"
+                name="image"
+                onChange={handleFileChange}
               />
             </Form.Group>
-            <Form.Group controlId="formYear">
-              <Form.Label>Year</Form.Label>
-              <Form.Control
-                type="text"
-                name="year"
-                value={formData.year || ''}
-                onChange={handleInputChange}
-              />
-            </Form.Group>
-            <Form.Group controlId="formDOI">
-              <Form.Label>DOI</Form.Label>
-              <Form.Control
-                type="text"
-                name="doi"
-                value={formData.doi || ''}
-                onChange={handleInputChange}
-              />
-            </Form.Group>
-          </>
+  
+            </>
         );
       default:
         return null;

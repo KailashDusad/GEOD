@@ -1,29 +1,34 @@
 [
-    {
-        "title": "Advancements in AI",
-        "authors": "John Doe, Jane Smith",
-        "journal": "Journal of AI Research",
-        "year": 2022,
-        "description": "An in-depth look at the latest advancements in artificial intelligence.",
-        "image": "monu4",
-        "type": "jpg"
-      },
-      {
-        "title": "Renewable Energy Innovations",
-        "authors": "Emily Johnson, Michael Brown",
-        "journal": "Renewable Energy Journal",
-        "year": 2021,
-        "description": "Exploring the latest innovations in renewable energy technologies.",
-        "image": "monu5",
-        "type": "jpg"
-      },
-      {
-        "title": "Quantum Computing Breakthroughs",
-        "authors": "David Wilson, Sarah Lee",
-        "journal": "Quantum Computing Journal",
-        "year": 2023,
-        "description": "Recent breakthroughs in the field of quantum computing.",
-        "image": "monu6",
-        "type": "jpg"
-      }
+  {
+    "title": "Advancements in AI",
+    "authors": "John Doe, Jane Smith",
+    "journal": "Journal of AI Research",
+    "year": 2022,
+    "description": "An in-depth look at the latest advancements in artificial intelligence.",
+    "image": "monu4.jpg"
+  },
+  {
+    "title": "Renewable Energy Innovations",
+    "authors": "Emily Johnson, Michael Brown",
+    "journal": "Renewable Energy Journal",
+    "year": 2021,
+    "description": "Exploring the latest innovations in renewable energy technologies.",
+    "image": "monu5.jpg"
+  },
+  {
+    "title": "Quantum Computing Breakthroughs",
+    "authors": "David Wilson, Sarah Lee",
+    "journal": "Quantum Computing Journal",
+    "year": 2023,
+    "description": "Recent breakthroughs in the field of quantum computing.",
+    "image": "monu6.jpg"
+  },
+  {
+    "title": "Kd publication",
+    "authors": "kd bhai",
+    "journal": "publication on kd bhai",
+    "year": "2024",
+    "description": "no discription",
+    "image": "Kd publication.jpg"
+  }
 ]

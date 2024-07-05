@@ -19,7 +19,7 @@ const Data = () => {
             <Col key={index} xs={12} md={6} lg={4}>
               <Card className="dataset-card h-100">
                 {/* <Card.Img variant="top" src={dataset.image} alt={dataset.title} className="card-img-top" /> */}
-                <Card.Img variant="top" src={require(`../assets/${dataset.image}.${dataset.type}`)} alt={dataset.title} className="card-img-top" />
+                <Card.Img variant="top" src={require(`../assets/${dataset.image}`)} alt={dataset.title} className="card-img-top" />
                 <Card.Body>
                   <Card.Title>{dataset.title}</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">Lead: {dataset.lead}</Card.Subtitle>
