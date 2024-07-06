@@ -6,6 +6,7 @@ const path = require('path');
 const multer = require('multer');
 require('dotenv').config();
 
+
 const app = express();
 const PORT = 5000;
 
@@ -86,6 +87,7 @@ app.post('/api/add-content', upload.single('image'), (req, res) => {
   });
 });
 
+
 app.post('/api/authenticate', async (req, res) => {
     const User = process.env.USER;
     const Password = process.env.PASSWORD;
@@ -127,6 +129,13 @@ app.get('/api/datasets', (req, res) => {
 
 app.get('/api/publications', (req, res) => {
   const filePath = path.join(__dirname, 'data', 'publications.json');
+  fs.readFile(filePath, 'utf8', (err, fileData) => {
+    if (err) return res.status(500).send('Error reading file');
+    res.send(fileData);
+  });
+});
+app.get('/api/pass', (req, res) => {
+  const filePath = path.join(__dirname, 'data', 'passkeys.json');
   fs.readFile(filePath, 'utf8', (err, fileData) => {
     if (err) return res.status(500).send('Error reading file');
     res.send(fileData);

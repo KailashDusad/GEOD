@@ -1,10 +1,32 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import MyNavbar from './Navbar';
 import '../styles/Contact.css';
 import logoBlack from '../assets/logo_black.png';
 import Footer from './Footer';
 import Heading from './Heading';
+import emailjs from '@emailjs/browser';
+import usePass from './Pass';
 const Contact = () => {
+  const Frm = useRef();
+  const passKeys = usePass();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(passKeys[0].SERVICE, passKeys[0].TEMPLATE, Frm.current,{
+        publicKey: passKeys[0].PUBLIC,
+      })
+      .then(
+        () => {
+          alert('Message Sent Successfully !!');
+        },
+        (error) => {
+          alert('FAILED !!');
+          console.log(error);
+          console.log(passKeys);
+        },
+      );
+  };
   return (
     <>
       <MyNavbar />
@@ -15,7 +37,7 @@ const Contact = () => {
       <h6 style={{fontSize:'1.3rem'}}> <span style={{fontSize:'1.2rem'}}>AB-12/406B</span> <br /> Indian Institute of Technology, Gandhinagar</h6>
       <h6><span style={{fontSize:'1rem'}}>Palaj, Gandhinagar - 382055, Gujarat</span></h6>
       <div class="container1">
-      <form action="/contact" method="post">
+      <form ref={Frm} onSubmit={sendEmail}>
           <div class="image">
             <img src={logoBlack} alt="" />
           </div>
@@ -23,7 +45,7 @@ const Contact = () => {
             <h2>Contact Us</h2>
           </center>
           <label for="email">Email Id</label>
-          <input type="email" name="email" id="email" placeholder="Your Institute email Id" />
+          <input type="email" name="email" id="email" placeholder="Your email Id" />
           <label for="message" id="text-label">How can we help?</label>
           <textarea name="message" id="message" cols="60" rows="5" placeholder="Type your message here"></textarea>
           <button id="signup">Submit</button>

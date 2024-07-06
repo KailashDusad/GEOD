@@ -1,14 +1,14 @@
 import React from 'react';
 import MyNavbar from './Navbar';
 // import publicationData from './PublicationData';
-import useReasearch from './PublicationData';
+import usePublication from './PublicationData';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import Heading from './Heading';
 import '../styles/Publications.css';
 import Footer from './Footer';
 
 const Publications = () => {
-  const publicationData = useReasearch();
+  const publicationData = usePublication();
   return (
     <>
       <MyNavbar />
