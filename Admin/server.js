@@ -4,6 +4,7 @@ const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const multer = require('multer');
+require('dotenv').config();
 
 const app = express();
 const PORT = 5000;
@@ -85,6 +86,20 @@ app.post('/api/add-content', upload.single('image'), (req, res) => {
   });
 });
 
+app.post('/api/authenticate', async (req, res) => {
+    const User = process.env.USER;
+    const Password = process.env.PASSWORD;
+    const uname = req.body.username;
+    const pass = req.body.password;
+    if(uname === User && pass === Password){
+      res.status(200).json({message:'Welcome Admin!!'});
+    }
+    else{
+      res.status(401).json({message:'Invalid credentials!!'});
+    }
+
+
+});
 
 app.get('/api/team', (req, res) => {
   const filePath = path.join(__dirname, 'data', 'team.json');

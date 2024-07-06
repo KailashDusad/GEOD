@@ -41,17 +41,18 @@ const Footer = () => {
                                     <li><a className='hvr-underline-from-center-footer' href="/">Home</a></li>
                                     <li><a className='hvr-underline-from-center-footer' href="/research">Research Areas</a></li>
                                     <li><a className='hvr-underline-from-center-footer' href="/data">Data</a></li>
-                                    <li><a className='hvr-underline-from-center-footer' href="#">News</a></li>
-                                    <li><a className='hvr-underline-from-center-footer' href="/contact">Contact Us</a></li>
+                                    {/* <li><a className='hvr-underline-from-center-footer' href="#">News</a></li> */}
+                                    <li><a className='hvr-underline-from-center-footer' href="/publications">Publications</a></li>
                                 </ul>
                             </Col>
                             <Col md={4} xs={6}>
                                 <ul className="list-unstyled mt-md-4">
-                                    <li><a className='hvr-underline-from-center-footer' href="/iitgn">IITGN</a></li>
-                                    <li><a className='hvr-underline-from-center-footer' href="/publications">Publications</a></li>
+                                    <li><a className='hvr-underline-from-center-footer' target='_blank' href="https://iitgn.ac.in">IITGN</a></li>
                                     <li><a className='hvr-underline-from-center-footer' href="/people">People</a></li>
-                                    <li><a href="/drought-monitor">India Drought Monitor</a></li>
-                                    <li><a href="/eflsp">EFLSP (IMD)</a></li>
+                                    <li><a className='hvr-underline-from-center-footer' href="/contact">Contact Us</a></li>
+                                    <li><a className='hvr-underline-from-center-footer' href="/gallery">Gallery</a></li>
+                                    {/* <li><a href="/drought-monitor">India Drought Monitor</a></li>
+                                    <li><a href="/eflsp">EFLSP (IMD)</a></li> */}
                                 </ul>
                             </Col>
                         </Row>

@@ -8,19 +8,49 @@ const Login = () => {
     const User = "utsav";
     const Password = "utsav";
 
-    const handleSubmit = (e) => {
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     const username = e.target.username.value;
+    //     const password = e.target.password.value;
+    //     if (username === User && password === Password) {
+    //         setIsAuthenticated(true); 
+    //     } else {
+    //         alert("Invalid credentials");
+    //     }
+    //     e.target.username.value = "";
+    //     e.target.password.value = "";
+    // };
+
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const username = e.target.username.value;
         const password = e.target.password.value;
-        if (username === User && password === Password) {
-            setIsAuthenticated(true); 
-        } else {
-            alert("Invalid credentials");
+    
+        try {
+            const response = await fetch('http://localhost:5000/api/authenticate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            });
+    
+            if (response.ok) {
+                // const { token } = await response.json();
+                // sessionStorage.setItem('authToken', token);
+                setIsAuthenticated(true);
+            } else {
+                alert("Invalid credentials");
+            }
+        } catch (error) {
+            console.error('Authentication error:', error);
+            alert("An error occurred during authentication.");
         }
+    
         e.target.username.value = "";
         e.target.password.value = "";
     };
-
     if (isAuthenticated) {
         return <AdminForm />;
     }
