@@ -1,53 +1,87 @@
+/* Home.css */
 
-.hero-section {
-    padding: 100px 0;
-    background: linear-gradient(to right, #0066cc, #0099ff);
-    color: white;
-    text-align: center;
-  }
-  
-  .hero-section h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  
-  .hero-section p {
-    font-size: 1.25rem;
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
-  
-  .hero-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-  }
-  
-  .info-card {
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .info-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .info-card .card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #343a40;
-  }
-  
-  .info-card .card-text {
-    font-size: 1rem;
-    color: #495057;
-    margin-top: 10px;
-  }
-  
-  .info-card .btn {
-    margin-top: 20px;
-  }
-  
+.hero-section .carousel-item {
+  height: 600px;
+}
+
+.hero-section .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.carousel-caption h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1.25rem;
+  margin-top: 10px;
+}
+
+.hero-button {
+  margin-top: 20px;
+}
+
+.info-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.info-card .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.info-card .card-text {
+  font-size: 1rem;
+  color: #495057;
+  margin-top: 10px;
+}
+
+.info-card .btn {
+  margin-top: 20px;
+  background-color: #0066cc;
+  border: none;
+}
+
+.info-card .btn:hover {
+  background-color: #005bb5;
+}
+
+.group-section {
+  padding: 50px 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.group-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.group-section p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+}
+
+.group-section .group-photo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}

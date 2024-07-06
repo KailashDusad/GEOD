@@ -1,28 +1,45 @@
 import React from 'react';
 import MyNavbar from './Navbar';
-import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import { Container, Row, Col, Button, Card, Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
 import Footer from './Footer';
-import logo from '../assets/logo_black.png';
+import heroImage1 from '../assets/campus1.jpg';
+import heroImage2 from '../assets/campus9.jpg';
+import heroImage3 from '../assets/campus2.png';
+import groupPhoto from '../assets/monu5.jpg';
 
 const Home = () => {
   return (
     <>
       <MyNavbar />
       <header className="hero-section">
-        <Container>
-          <Row className="align-items-center">
-            <Col lg={6} className="text-center text-lg-start">
-              <h1>Welcome to Our Research Hub</h1>
+        <Carousel>
+          <Carousel.Item>
+            <img className="d-block w-100" src={heroImage1} alt="First slide" />
+            <Carousel.Caption>
+              <h3>Welcome to Our Research Hub</h3>
               <p>Explore our projects, datasets, publications, and meet our dedicated team.</p>
-              <Button as={Link} to="/contact" variant="primary" size="lg">Get in Touch</Button>
-            </Col>
-            <Col lg={6} className="text-center">
-              <img src={logo} alt="Research Hub" style={{height:'300px', width:'300px'}} className="img-fluid rounded-3" />
-            </Col>
-          </Row>
-        </Container>
+              <Button as={Link} to="/contact" variant="primary" size="lg" className="hero-button">Get in Touch</Button>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src={heroImage2} alt="Second slide" />
+            <Carousel.Caption>
+              <h3>Innovative Research Projects</h3>
+              <p>Discover the innovative projects our team is working on.</p>
+              <Button as={Link} to="/research" variant="primary" size="lg" className="hero-button">Learn More</Button>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src={heroImage3} alt="Third slide" />
+            <Carousel.Caption>
+              <h3>Comprehensive Datasets</h3>
+              <p>Access comprehensive datasets used in our research.</p>
+              <Button as={Link} to="/data" variant="primary" size="lg" className="hero-button">View Datasets</Button>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
       </header>
       <Container className="my-5">
         <Row className="gy-4">
@@ -30,7 +47,7 @@ const Home = () => {
             <Card className="info-card h-100">
               <Card.Body className="text-center">
                 <Card.Title>Our Research Projects</Card.Title>
-                <Card.Text>Discover the innovative projects our team is working</Card.Text>
+                <Card.Text>Discover the innovative projects our team is working on.</Card.Text>
                 <Button as={Link} to="/research" variant="primary">Learn More</Button>
               </Card.Body>
             </Card>
@@ -55,6 +72,17 @@ const Home = () => {
           </Col>
         </Row>
       </Container>
+      <section className="group-section">
+        <Container>
+          <Row>
+            <Col className="text-center">
+              <h2>Our Dedicated Team</h2>
+              <p>Meet the talented individuals who drive our research forward.</p>
+              <img src={groupPhoto} alt="Group Photo" className="img-fluid rounded-3 group-photo" />
+            </Col>
+          </Row>
+        </Container>
+      </section>
       <Footer />
     </>
   );

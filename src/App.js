@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Cards from './components/Cards';
 import Gallery from './components/Gallery';
 import Home from './components/Home';
 import Contact from './components/Contact';
@@ -10,8 +9,8 @@ import Data from './components/Data';
 import Publications from './components/Publications';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DatasetDetail from './components/DatasetDetail';
-import AdminForm from './components/AdminForm';
 import CheckA from './components/CheckA';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -27,8 +26,8 @@ function App() {
         <Route path='/publications' element={<Publications />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/datasets/:id' element={<DatasetDetail />} />
-        <Route path='/admin' element={<AdminForm />} />
         <Route path='/check' element={<CheckA />} />
+        <Route path='/admin' element={<Login />} />
       </Routes>
     </Router>
     {/* <Footer /> */}
