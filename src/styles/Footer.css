@@ -2,6 +2,20 @@
     padding: 20px 0;
     border-top: 1px solid #eaeaea;
 }
+#btn-circle {
+  margin-right: 20px;
+  border-radius: 50%; 
+  width: 40px; 
+  height: 40px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+}
+#btn-circle:hover {
+  background-color: black; 
+  color: white;
+}
 
 .footer h6 {
     font-weight: bold;

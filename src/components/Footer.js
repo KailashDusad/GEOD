@@ -3,21 +3,25 @@ import { Container, Row, Col } from 'react-bootstrap';
 import logoBlack from '../assets/logo_black.png';
 import name from '../assets/logo-no-background.png';
 import '../styles/Footer.css';
+import { FaArrowUp } from 'react-icons/fa';
 
 const Footer = () => {
     return (
         <>
         <footer className="footer bg-light">
+            <a href="#top" style={{float:'right'}} id='btn-circle' className="btn btn-floating" role="button">
+                <FaArrowUp />
+            </a>
             <Container>
                 <Row className="pt-4">
                     <Col md={6} className="text-md-left">
-                        <img
+                        <a href='/'><img
                             alt="name"
                             src={name}
                             width="100"
                             height="50"
                             className="d-inline-block align-top"
-                        />
+                        /></a>
                         <img
                             style={{marginLeft:'7px'}}
                             alt="logo"
@@ -33,8 +37,9 @@ const Footer = () => {
                             Palaj, Gandhinagar, Gujarat, PIN - 382355.
                         </p>
                     </Col>
-                    <Col md={6}>
+                    <Col md={5}>
                         <Row>
+                        
                             <Col md={4} xs={6}>
                                 <h6>Quick links</h6>
                                 <ul className="list-unstyled">
@@ -55,6 +60,7 @@ const Footer = () => {
                                     <li><a href="/eflsp">EFLSP (IMD)</a></li> */}
                                 </ul>
                             </Col>
+                            
                         </Row>
                     </Col>
                 </Row>

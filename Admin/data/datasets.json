@@ -19,12 +19,5 @@
     "lead": "Dr. Emily Johnson",
     "image": "monu6.jpg",
     "link": "/datasets/quantum-computing-data"
-  },
-  {
-    "title": "KD Dataset",
-    "description": "test on dataset",
-    "lead": "Bhai",
-    "link": "/datasets/bhai-ka-dataset",
-    "image": "KD Dataset.jpg"
   }
 ]
