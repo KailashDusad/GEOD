@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DatasetDetail from './components/DatasetDetail';
 import CheckA from './components/CheckA';
 import Login from './components/Login';
+import MemberProfile from './components/MemberProfile';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='/datasets/:id' element={<DatasetDetail />} />
         <Route path='/check' element={<CheckA />} />
         <Route path='/admin' element={<Login />} />
+        <Route path="/profile/:id" element={<MemberProfile />} />
       </Routes>
     </Router>
     {/* <Footer /> */}

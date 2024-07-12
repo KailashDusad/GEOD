@@ -9,7 +9,7 @@ import img8 from '../assets/monu6.jpg'
 import img9 from '../assets/monu4.jpg'
 
 const Images = [
-    { id: 1, src: img1, title: 'Someone 1', caption:'Someone Image' },
+    { id: 1, src: img6, title: 'Someone 1', caption:'Someone Image' },
     { id: 2, src: img2, title: 'Logo No Background', caption:'Black Logo Image with no background'},
     { id: 3, src: img3, title: 'Logo Black', caption:'Black Logo Image'},
     { id: 4, src: img4, title: 'Logo White', caption:'White Logo Image'},

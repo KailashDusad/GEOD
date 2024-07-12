@@ -1,0 +1,36 @@
+.team-card {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .team-card-img {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .team-card-title {
+    font-weight: bold;
+  }
+  
+  .team-category {
+    margin-top: 2rem;
+  }
+  
+  .back-link {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
+  #link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  #link:hover {
+    text-decoration: none;
+  }
+  
