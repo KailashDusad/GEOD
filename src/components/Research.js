@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import MyNavbar from './Navbar';
 // import ResearchData from './ResearchData';
 import useReasearch from './ResearchData';
@@ -6,13 +6,26 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import Heading from './Heading';
 import '../styles/Research.css'; 
 import Footer from './Footer';
+import Loader from './Loader';
 
 const Research = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false); 
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
   const ResearchData = useReasearch();
   return (
     <>
       <MyNavbar />
       <Heading headingText="Our Research Projects" />
+      {loading ? (
+        <Loader /> 
+      ) : (
       <Container className="my-5">
         <Row className="gy-4">
           {ResearchData.map((project, index) => (
@@ -30,6 +43,7 @@ const Research = () => {
           ))}
         </Row>
       </Container>
+      )}
       <Footer />
 
     </>

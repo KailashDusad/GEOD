@@ -1,12 +1,23 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import MyNavbar from './Navbar';
 import usePublication from './PublicationData';
 import { Container, Row, Col, Form, InputGroup } from 'react-bootstrap';
 import Heading from './Heading';
 import '../styles/Publications.css';
 import Footer from './Footer';
+import Loader from './Loader';
 
 const Publications = () => {
+  
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false); 
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
   const publicationData = usePublication();
   // const [searchQuery, setSearchQuery] = useState("");
   const [selectedType, setSelectedType] = useState("All");
@@ -29,6 +40,9 @@ const Publications = () => {
     <>
       <MyNavbar />
       <Heading headingText="Our Publications" />
+      {loading ? (
+        <Loader /> 
+      ) : (
       <Container className="">
         <Form style={{border:'none'}}>
           <Row className="">
@@ -90,7 +104,7 @@ const Publications = () => {
               <div className="publication-entry">
                 <div className="publication-index">{index + 1}.</div>
                 <div className="publication-content">
-                  <a href={publication.link} target="_blank" rel="noopener noreferrer">
+                  <a href={publication.link} className='hvr-underline-from-center1' style={{textDecoration:'none'}} target="_blank" rel="noopener noreferrer">
                     {publication.title}
                   </a>
                 </div>
@@ -99,6 +113,7 @@ const Publications = () => {
           ))}
         </Row>
       </Container>
+      )}
       <Footer />
     </>
   );

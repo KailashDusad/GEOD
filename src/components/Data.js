@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import MyNavbar from './Navbar';
 // import Dataset from './Dataset';
 import useDataset from './Dataset';
@@ -6,13 +6,26 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import Heading from './Heading';
 import '../styles/Data.css';
 import Footer from './Footer';
+import Loader from './Loader';
 
 const Data = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false); 
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
   const Dataset = useDataset();
   return (
     <>
       <MyNavbar />
       <Heading headingText="Research Datasets" />
+      {loading ? (
+        <Loader /> 
+      ) : (
       <Container className="my-5">
         <Row className="gy-4">
           {Dataset.map((dataset, index) => (
@@ -31,6 +44,7 @@ const Data = () => {
           ))}
         </Row>
       </Container>
+      )}
       <Footer />
     </>
   );

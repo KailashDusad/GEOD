@@ -38,15 +38,15 @@ const MemberProfile = () => {
           </Col>
           <Col md={8}>
             <h2>{member.name}</h2>
-            <p>
+            <p className='mb-2'>
               {member.email && (
                 <a href={`mailto:${member.email}`} target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faEnvelope} style={{height:'35px', width:'35px'}} />
+                  <FontAwesomeIcon icon={faEnvelope} style={{height:'35px', width:'35px', marginRight:'10px'}} />
                 </a>
               )}
               {member.linkedin && (
                 <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faLinkedin} style={{height:'35px', width:'35px'}}/>
+                  <FontAwesomeIcon icon={faLinkedin} style={{height:'35px', width:'35px', marginRight:'10px'}}/>
                 </a>
               )}
               {member.gate && (
@@ -55,10 +55,10 @@ const MemberProfile = () => {
                 </a>
               )}
             </p>
-            <p><strong>Position:</strong> {member.position}</p>
-            <p><strong>Research Interest:</strong> {member.description}</p>
+            <p className='mt-2 mb-2'><strong>Position:</strong> {member.position}</p>
+            <p className='mt-2 mb-2'><strong>Research Interest:</strong> {member.description}</p>
             {member.experience1 && (
-              <p>
+              <p className='mt-2 mb-4'>
                 <FontAwesomeIcon icon={faBriefcase} /> <strong>Experience:</strong>
                 <br />{member.experience1}
                 {member.experience2 && <><br />{member.experience2}</>}
@@ -69,7 +69,7 @@ const MemberProfile = () => {
               </p>
             )}
             {member.education1 && (
-              <p>
+              <p className='mt-2 mb-4'>
                 <FontAwesomeIcon icon={faGraduationCap} /> <strong>Education:</strong>
                 <br />{member.education1}
                 {member.education2 && <><br />{member.education2}</>}

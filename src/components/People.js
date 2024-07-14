@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -6,8 +6,17 @@ import Heading from './Heading';
 import useTeamInfo from './TeamInfo';
 import '../styles/Team.css';
 import { Link } from 'react-router-dom';
-
+import Loader from './Loader';
 const Team = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false); 
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
   const TeamInfo = useTeamInfo();
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -24,6 +33,9 @@ const Team = () => {
     <>
       <Navbar />
       <Heading headingText="Our Team" />
+      {loading ? (
+        <Loader /> 
+      ) : (
       <Container className="my-5">
         {/* <Form inline className="justify-content-center mb-4">
           <Form.Control
@@ -110,6 +122,7 @@ const Team = () => {
           </Row>
         </div>
       </Container>
+      )}
       <Footer />
     </>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import MyNavbar from './Navbar';
 import { Container, Row, Col, Button, Card, Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -8,11 +8,25 @@ import heroImage1 from '../assets/campus1.jpg';
 import heroImage2 from '../assets/campus9.jpg';
 import heroImage3 from '../assets/campus2.png';
 import groupPhoto from '../assets/monu5.jpg';
+import Loader from './Loader'; 
 
 const Home = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false); 
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
       <MyNavbar />
+      {loading ? (
+        <Loader /> 
+      ) : (
+        <div>
       <header className="hero-section">
         <Carousel>
           <Carousel.Item>
@@ -83,6 +97,8 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+      </div>
+      )}
       <Footer />
     </>
   );

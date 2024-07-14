@@ -12,6 +12,7 @@ import DatasetDetail from './components/DatasetDetail';
 import CheckA from './components/CheckA';
 import Login from './components/Login';
 import MemberProfile from './components/MemberProfile';
+import Loader from './components/Loader';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path='/check' element={<CheckA />} />
         <Route path='/admin' element={<Login />} />
         <Route path="/profile/:id" element={<MemberProfile />} />
+        <Route path="/load" element={<Loader />} />
       </Routes>
     </Router>
     {/* <Footer /> */}

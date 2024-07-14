@@ -36,14 +36,17 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
+
 const usePublication = () => {
   const [Publication, setPublication] = useState([]);
+  
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get('http://localhost:5000/api/publications');
         setPublication(response.data);
+        
       } catch (error) {
         console.error('Error fetching Publication data', error);
       }
