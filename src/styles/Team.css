@@ -1,15 +1,31 @@
 .team-card {
     display: flex;
     flex-direction: row;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth hover effects */
+  }
+  
+  .team-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
   }
   
   .team-card-img {
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease; /* Add transition for image zoom effect */
+  }
+  
+  .team-card:hover .team-card-img {
+    transform: scale(1); /* Slightly zoom the image on hover */
   }
   
   .team-card-title {
     font-weight: bold;
+    transition: color 0.3s ease; /* Add transition for title color change */
+  }
+  
+  .team-card:hover .team-card-title {
+    color: #0056b3; /* Change title color on hover */
   }
   
   .team-category {
@@ -34,3 +50,28 @@
     text-decoration: none;
   }
   
+  .team-card-body {
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Add transition for text fade-in effect */
+  }
+  
+  .team-card:hover .team-card-body {
+    opacity: 1; /* Show text on hover */
+  }
+  
+  /* Optional: Add a subtle pulse animation to the card on hover */
+  /* @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+  } */
+  
+  /* .team-card:hover {
+    animation: pulse 1.5s infinite; 
+  } */

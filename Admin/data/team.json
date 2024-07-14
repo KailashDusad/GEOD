@@ -1,18 +1,20 @@
 [
   {
-    "id":9,
-    "name": "Shikha Sharma",
-    "position": "Professor",
-    "image": "sikha.png",
-    "description": "Seismology, Earthquake Engineering Ground Motion, Seismic Hazard Analysis, Earthquake Seismology",
-    "email": "sharma_shikha@iitgn.ac.in, sharmashikha494@gmail.com",
-    "education1": "1. Bachelor of Technology(B.Tech) in Civil Engineering from BIT Ghaziabad(Gold Medalist)",
-    "education2": "2. Master of Technology(M.Tech) (2017-2019) in Earthquake Science and Engineering from IIT(ISM) Dhanbad",
-    "education3": "3. PhD (2019 onwards) in Department of Earth Sciences",
-    "experience1":"1. Served as a Teaching Assistant for the workshop 'Emerging Approaches in Earthquake Occurrence and Risks' (July 5 - 12, 2022) at IIT Gandhinagar.",
-    "experience2":"2. Coordinated the Climate Action Now (CAN) 2022-23 Workshop - Segments II and III, organized by IIT Gandhinagar in collaboration with the GEER Foundation, Gujarat.",
-    "experience3":"3. Worked as an Assistant Professor for almost 3 years. Teaching Civil engineering students.",
-    "experience4":"4. Completed a two-month summer internship at the National Center of Seismology (NCS) in New Delhi in 2018, focusing on the topic “Estimation of Crustal Discontinuities of Seismic Waves for the Indo-Myanmar Region, Northeast India.”"
+    "id":0,
+    "name": "Utsav Mannu",
+    "position": "Assistant Professor, Earth Sciences",
+    "image": "utsav.jpeg",
+    "description": "Studying the relationship between the evolution of accretionary wedges, the surface processes, and the thermal conditions inside a wedge.",
+    "email": "utsav.mannu@iitgn.ac.in",
+    "education1": "BS-MS: Indian Institute of Science Education and Research-Kolkata, 2012",
+    "experience1":"1. Assistant Professor, Indian Institute of Technology Gandhinagar (Nov 2021 to Present)",
+    "experience2":"2. Inspire Faculty, Indian Institute of Science Education and Research, Pune (Aug 2019 - Mar 2021)",
+    "experience3":"3. Visiting Professor, Earthquake Research Institute, TOKYO UNIVERSITY (Mar 2019 - Aug 2019)",
+    "experience4":"4. Research Assistant, IISER Pune (Dec 2017 - Aug 2018)",
+    "experience5":"5. Postdoctoral Fellow, ETH Zurich (Jan 2017 - Dec 2017)",
+    "experience6":"6. Project Assistant, National Geophysical Research Institute (May 2012 - Dec 2012)",
+    "linkedin":"https://www.linkedin.com/in/utsav-mannu-081a7351/",
+    "gate":""
   },
   {
     "id":1,
@@ -20,14 +22,16 @@
     "position": "PhD Student",
     "image": "sikha.png",
     "description": "Seismology, Earthquake Engineering Ground Motion, Seismic Hazard Analysis, Earthquake Seismology",
-    "email": "sharma_shikha@iitgn.ac.in, sharmashikha494@gmail.com",
+    "email": "sharma_shikha@iitgn.ac.in",
     "education1": "1. Bachelor of Technology(B.Tech) in Civil Engineering from BIT Ghaziabad(Gold Medalist)",
     "education2": "2. Master of Technology(M.Tech) (2017-2019) in Earthquake Science and Engineering from IIT(ISM) Dhanbad",
     "education3": "3. PhD (2019 onwards) in Department of Earth Sciences",
     "experience1":"1. Served as a Teaching Assistant for the workshop 'Emerging Approaches in Earthquake Occurrence and Risks' (July 5 - 12, 2022) at IIT Gandhinagar.",
     "experience2":"2. Coordinated the Climate Action Now (CAN) 2022-23 Workshop - Segments II and III, organized by IIT Gandhinagar in collaboration with the GEER Foundation, Gujarat.",
     "experience3":"3. Worked as an Assistant Professor for almost 3 years. Teaching Civil engineering students.",
-    "experience4":"4. Completed a two-month summer internship at the National Center of Seismology (NCS) in New Delhi in 2018, focusing on the topic “Estimation of Crustal Discontinuities of Seismic Waves for the Indo-Myanmar Region, Northeast India.”"
+    "experience4":"4. Completed a two-month summer internship at the National Center of Seismology (NCS) in New Delhi in 2018, focusing on the topic “Estimation of Crustal Discontinuities of Seismic Waves for the Indo-Myanmar Region, Northeast India.”",
+    "linkedin":"https://www.linkedin.com/in/shikha-sharma-5211131a3",
+    "gate":"https://www.researchgate.net/profile/Shikha-Sharma-51"
   },
   {
     "id":2,
@@ -39,10 +43,8 @@
     "education1": "1. B.Tech in Civil Engineering (2016-2020).",
     "education2": "2. M.Tech in Earth System Science and Engineering (2021-2023).",
     "education3": "3. PhD in Earth Science (2023-present)",
-    "experience1":"",
-    "experience2":"",
-    "experience3":"",
-    "experience4":""
+    "linkedin":"",
+    "gate":""
   },
   {
     "id":3,
@@ -50,14 +52,15 @@
     "position": "PhD Student",
     "image": "omkar.jpg",
     "description": "Seismology, Statistical Seismology, Engineering Seismology, Optimisation, Ground Motion Modelling, Ground Motion Simulation",
-    "email": "omkarsingh887733@gmail.com, omkar.singh@iitgn.ac.in",
+    "email": "omkar.singh@iitgn.ac.in",
     "education1": "1. BTech in Mechanical Engineering (2016-2020).",
     "education2": "2. MTech is Earth Science (2020-2023).",
     "education3": "3. Phd in Earth Science (2023- Ongoing)",
     "experience1":"1. Project Assistant, Indian Institute of Technology Gandhinagar [02/02/2023-01/05/2023]",
     "experience2":"2. Industrial Engineering Intern Indian Oil Corporation Limited, Barauni [ 01/06/2018 – 01/07/2018 ]",
     "experience3":"3. Industrial Engineering Intern Laxmi Prasad Gupta Bolier and Machinery Maintenance [ 01/07/2019 – 30/07/2019 ]",
-    "experience4":""
+    "linkedin":"www.linkedin.com/in/omkar-singh-931453250",
+    "gate":"https://www.researchgate.net/profile/Omkar-Singh-13"
   },
   {
     "id":4,
@@ -70,9 +73,8 @@
     "education2": "2. M.SC. Tech in Applied Geophysics (2016-2019).",
     "education3": "3. Ph.D. (2020-Present)",
     "experience1":"1. Working as a Geophysicist (Surface) in ONGC Ltd.",
-    "experience2":"",
-    "experience3":"",
-    "experience4":""
+    "linkedin":"https://www.linkedin.com/in/saurabh-choubey-22b97a141/",
+    "gate":""
   },
   
   {
@@ -87,24 +89,10 @@
     "education3": "3. IIT (ISM) Dhanbad PhD, Earth Science, 2023- Ongoing, IIT Gandhinagar",
     "experience1":"1. Student Trainee (Online Mode) at Oil and Natural Gas Corporation Ltd. Mumbai, 2022",
     "experience2":"2. Geophysical Field Training, IIT (ISM) Dhanbad, 2021",
-    "experience3":"",
-    "experience4":""
+    "linkedin":"https://www.linkedin.com/in/parvee-kushwaha-0984a8209/",
+    "gate":"https://www.researchgate.net/profile/Parvee-Kushwaha"
   },
-  {
-    "id":6,
-    "name": "Jagroop SIngh",
-    "position": "Masters",
-    "image": "jagroop.jpg",
-    "description": "Geodynamic Modeling",
-    "email": "jagroop.singh@iitgn.ac.in",
-    "education1": "1. B.Sc. Physics (2017-2020)",
-    "education2": "2. M.Sc. Physics ( 2020-2022)",
-    "education3": "3. M.Tech. Earth Sciences (2023-2025)",
-    "experience1":"",
-    "experience2":"",
-    "experience3":"",
-    "experience4":""
-  },
+  
   {
     "id":7,
     "name": "Dakshata Suresh bhamare",
@@ -116,8 +104,20 @@
     "education2": "2. B.E in Mechanical (2017-2021), M.Tech in Earth System Science(2023-present)",
     "education3": "",
     "experience1":"1. Worked as an Assistant System Engineer Trainee in TATA CONSULTANCY SERVICE LIMITED(MAY 2022-JULY 2023)",
-    "experience2":"",
-    "experience3":"",
-    "experience4":""
+    "linkedin":"https://www.linkedin.com/in/dakshatabhamare12345",
+    "gate":"https://www.researchgate.net/profile/Dakshata-Bhamare"
+  },
+  {
+    "id":6,
+    "name": "Jagroop SIngh",
+    "position": "Masters",
+    "image": "jagroop.jpg",
+    "description": "Geodynamic Modeling",
+    "email": "jagroop.singh@iitgn.ac.in",
+    "education1": "1. B.Sc. Physics (2017-2020)",
+    "education2": "2. M.Sc. Physics ( 2020-2022)",
+    "education3": "3. M.Tech. Earth Sciences (2023-2025)",
+    "linkedin":"https://www.linkedin.com/in/jagr00p-singh",
+    "gate":""
   }
 ]

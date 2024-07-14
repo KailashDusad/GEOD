@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Heading from './Heading';
@@ -12,7 +12,7 @@ const Team = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   // Separate members into categories
-  const professors = TeamInfo.filter(member => member.position === 'Professor');
+  const professors = TeamInfo.filter(member => member.position === 'Assistant Professor, Earth Sciences');
   const phdStudents = TeamInfo.filter(member => member.position === 'PhD Student');
   const mastersStudents = TeamInfo.filter(member => member.position === 'Masters');
 
@@ -34,7 +34,7 @@ const Team = () => {
           />
           <Button variant="outline-primary" onClick={() => setSearchTerm('')}>Clear</Button>
         </Form> */}
-        {/* <div className="team-category">
+        <div className="team-category">
           <h3>Professors</h3>
           <Row>
             {filteredProfessors.map((member, index) => (
@@ -58,7 +58,7 @@ const Team = () => {
               </Col>
             ))}
           </Row>
-        </div> */}
+        </div>
         <div className="team-category">
           <h3>PhD Students</h3>
           <Row>

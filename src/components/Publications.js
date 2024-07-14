@@ -1,33 +1,100 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MyNavbar from './Navbar';
-// import publicationData from './PublicationData';
 import usePublication from './PublicationData';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Form, InputGroup } from 'react-bootstrap';
 import Heading from './Heading';
 import '../styles/Publications.css';
 import Footer from './Footer';
 
 const Publications = () => {
   const publicationData = usePublication();
+  // const [searchQuery, setSearchQuery] = useState("");
+  const [selectedType, setSelectedType] = useState("All");
+  const [selectedYear, setSelectedYear] = useState("All");
+  const [selectedAuthor, setSelectedAuthor] = useState("All");
+
+  // const handleSearch = (event) => {
+  //   setSearchQuery(event.target.value);
+  // };
+
+  const filteredPublications = publicationData.filter((publication) => {
+    // const matchesQuery = publication.title.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesType = selectedType === "All" || publication.type === selectedType;
+    const matchesYear = selectedYear === "All" || publication.year === parseInt(selectedYear);
+    const matchesAuthor = selectedAuthor === "All" || publication.authors.toLowerCase().includes(selectedAuthor.toLowerCase());
+    return matchesType && matchesYear && matchesAuthor;
+  });
+
   return (
     <>
       <MyNavbar />
       <Heading headingText="Our Publications" />
-      <Container className="my-5">
-        <Row className="gy-4">
-          {publicationData.map((publication, index) => (
-            <Col key={index} xs={12} md={6} lg={4}>
-              <Card className="publication-card h-100">
-                {/* <Card.Img variant="top" src={publication.image} alt={publication.title} className="card-img-top" /> */}
-                <Card.Img variant="top" src={require(`../assets/${publication.image}`)} alt={publication.title} className="card-img-top" />
-                <Card.Body>
-                  <Card.Title>{publication.title}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">{publication.authors}</Card.Subtitle>
-                  <Card.Text><strong>Journal:</strong> {publication.journal}</Card.Text>
-                  <Card.Text><strong>Year:</strong> {publication.year}</Card.Text>
-                  <Card.Text>{publication.description}</Card.Text>
-                </Card.Body>
-              </Card>
+      <Container className="">
+        <Form style={{border:'none'}}>
+          <Row className="">
+            <Col md={4}>
+              <Form.Group controlId="searchType">
+                <Form.Label>Select Type</Form.Label>
+                <Form.Control
+                  as="select"
+                  value={selectedType}
+                  onChange={(e) => setSelectedType(e.target.value)}
+                >
+                  <option>All</option>
+                  {/* Add options dynamically based on publication types */}
+                  {[...new Set(publicationData.map((pub) => pub.type))].map((type, index) => (
+                    <option key={index}>{type}</option>
+                  ))}
+                </Form.Control>
+              </Form.Group>
+            </Col>
+            <Col md={4}>
+              <Form.Group controlId="searchYear">
+                <Form.Label>Year</Form.Label>
+                <Form.Control
+                  as="select"
+                  value={selectedYear}
+                  onChange={(e) => setSelectedYear(e.target.value)}
+                >
+                  <option>All</option>
+                  {[...new Set(publicationData.map((pub) => pub.year))].map((year, index) => (
+                    <option key={index}>{year}</option>
+                  ))}
+                </Form.Control>
+              </Form.Group>
+            </Col>
+            <Col md={4}>
+              <Form.Group controlId="searchAuthor">
+                <Form.Label>Author</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Search by author"
+                  value={selectedAuthor}
+                  onChange={(e) => setSelectedAuthor(e.target.value)}
+                />
+              </Form.Group>
+            </Col>
+          </Row>
+          {/* <InputGroup>
+            <Form.Control
+              type="text"
+              placeholder="Search by title"
+              value={searchQuery}
+              onChange={handleSearch}
+            />
+          </InputGroup> */}
+        </Form>
+        <Row className="gy-4 mt-4" >
+          {filteredPublications.map((publication, index) => (
+            <Col key={index} xs={12}>
+              <div className="publication-entry">
+                <div className="publication-index">{index + 1}.</div>
+                <div className="publication-content">
+                  <a href={publication.link} target="_blank" rel="noopener noreferrer">
+                    {publication.title}
+                  </a>
+                </div>
+              </div>
             </Col>
           ))}
         </Row>

@@ -1,26 +1,142 @@
 [
   {
-    "title": "Advancements in AI",
-    "authors": "John Doe, Jane Smith",
-    "journal": "Journal of AI Research",
-    "year": 2022,
-    "description": "An in-depth look at the latest advancements in artificial intelligence.",
-    "image": "monu4.jpg"
+      "title": " Dynamics of deep soil carbon – insights from C-14 time series across a climatic gradient",
+      "authors": "TS van der Voort, U Mannu, F Hagedorn, C McIntyre, L Walthert, ...",
+      "year": "2019",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:IWHjjKOFINEC"
   },
   {
-    "title": "Renewable Energy Innovations",
-    "authors": "Emily Johnson, Michael Brown",
-    "journal": "Renewable Energy Journal",
-    "year": 2021,
-    "description": "Exploring the latest innovations in renewable energy technologies.",
-    "image": "monu5.jpg"
+      "title": "Deconvolving the fate of carbon in coastal sediments",
+      "authors": "TS Van der Voort, U Mannu, TM Blattmann, R Bao, M Zhao, TI Eglinton",
+      "year": "2018",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:9ZlFYXVOiuMC"
   },
   {
-    "title": "Quantum Computing Breakthroughs",
-    "authors": "David Wilson, Sarah Lee",
-    "journal": "Quantum Computing Journal",
-    "year": 2023,
-    "description": "Recent breakthroughs in the field of quantum computing.",
-    "image": "monu6.jpg"
+      "title": "Stratigraphic signatures of forearc basin formation mechanisms",
+      "authors": "U Mannu, K Ueda, SD Willett, TV Gerya, M Strasser",
+      "year": "2017",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:qxL8FJ1GzNcC"
+  },
+  {
+      "title": "Impact of sedimentation on evolution of accretionary wedges: Insights from high‐resolution thermomechanical modeling",
+      "authors": "U Mannu, K Ueda, SD Willett, TV Gerya, M Strasser",
+      "year": "2016",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:_kc_bZDykSQC"
+  },
+  {
+      "title": "Forearc high uplift by lower crustal flow during growth of the Cyprus-Anatolian margin",
+      "authors": "D Fernandez-Blanco, G Mannu, Utsav, Bertotti, SD Willett",
+      "year": "2020",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:e5wmG9Sq2KIC"
+  },
+  {
+      "title": "Sedimentation and viscosity controls on forearc high growth",
+      "authors": "D Fernández‐Blanco, U Mannu, T Cassola, G Bertotti, SD Willett",
+      "year": "2021",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:mB3voiENLucC"
+  },
+  {
+      "title": "Thrusts control the thermal maturity of accreted sediments",
+      "authors": "U Mannu, D Fernández-Blanco, A Miyakawa, T Gerya, M Kinoshita",
+      "year": "2024",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:4JMBOYKVnBMC"
+  },
+  {
+      "title": "Thrusts control the thermal maturity of accreted sediments",
+      "authors": "U Mannu, D Fernández-Blanco, A Miyakawa, T Gerya, M Kinoshita",
+      "year": "2021",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:_Qo2XoVZTnwC"
+  },
+  {
+      "title": "Thermal maturity of the accretionary wedge",
+      "authors": "U Mannu, D Fernández-Blanco, A Miyakawa, T Gerya, M Kinoshita",
+      "year": "2020",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:R3hNpaxXUhUC"
+  },
+  {
+      "title": "Sedimentation and viscosity controls on forearc highs",
+      "authors": "D Fernández-Blanco, U Mannu, T Cassola, G Bertotti, S Willett",
+      "year": "2020",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:hFOr9nPyWt4C"
+  },
+  {
+      "title": "Dynamics of deep soil carbon–insights from 14C time series across a climatic gradient",
+      "authors": "TI Eglinton, TS Voort, L Walthert, N Haghipour, C McIntyre, F Hagedorn, ...",
+      "year": "2019",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:qUcmZB5y_30C"
+  },
+  {
+      "title": "Modelling accretionary wedge formation interacting with backarc extension: a parametric study",
+      "authors": "U Mannu, K Ueda, T Gerya, S Willett",
+      "year": "2018",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:L8Ckcad2t8MC"
+  },
+  {
+      "title": "Deconvolving the coastal carbon mosaic",
+      "authors": "TS van der Voort, U Mannu, T Blattmann, T Eglinton",
+      "year": "2018",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:7PzlFSSx8tAC"
+  },
+  {
+      "title": "Deconvolving the Fate of Carbon in Coastal Sediments",
+      "authors": "V Van, S Tessa, TM Blattmann, R Bao, U MANNU",
+      "year": "2018",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:ZeXyd9-uunAC"
+  },
+  {
+      "title": "Forearc Basins and Subduction Zones: Multi-Scale Numerical Modelling of Accretionary Wedges from Slab to Sediment Beds",
+      "authors": "U Mannu",
+      "year": "2017",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:Wp0gIr-vW9MC"
+  },
+  {
+      "title": "Seamount subduction underneath an accretionary wedge: modelling mass wasting and wedge collapse",
+      "authors": "U Mannu, K Ueda, S Willett, T Gerya, M Strasser",
+      "year": "2017",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:M3ejUd6NZC8C"
+  },
+  {
+      "title": "Modelling Forearc Basin Formation and Stratigraphy",
+      "authors": "U Mannu, K Ueda, S Willett, T Gerya, M Strasser",
+      "year": "2017",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:4TOpqqG69KYC"
+  },
+  {
+      "title": "Insights into soil carbon dynamics across climatic and geologic gradients from temporally-resolved radiocarbon measurements",
+      "authors": "TS van der Voort, F Hagedorn, U Mannu, L Walthert, C McIntyre, ...",
+      "year": "2016",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:QIV2ME_5wuYC"
+  },
+  {
+      "title": "Fault Identification by Unsupervised Learning Algorithm",
+      "authors": "S Nandan, U Mannu",
+      "year": "2012",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:dhFuZR0502QC"
+  },
+  {
+      "title": "Spatiotemporal Perturbations of Pore fluid Pressure in Kumaon Himalayas",
+      "authors": "U Mannu, S Nandan",
+      "year": "2012",
+      "type": "Journal Articles (published/accepted)",
+      "link": "https://scholar.google.ch/citations?view_op=view_citation&hl=en&user=hcisl7UAAAAJ&citation_for_view=hcisl7UAAAAJ:mVmsd5A6BfQC"
   }
 ]
