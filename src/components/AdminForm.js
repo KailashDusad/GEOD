@@ -9,12 +9,14 @@ const AdminForm = () => {
   const [formData, setFormData] = useState({});
   const [imageFile, setImageFile] = useState(null);
   const [experienceCount, setExperienceCount] = useState(1); // State to keep track of the number of experiences
+  const [educationCount, setEducationCount] = useState(1); 
 
   const handleOptionChange = (e) => {
     setSelectedOption(e.target.value);
     setFormData({});
     setImageFile(null);
     setExperienceCount(1); // Reset experience count when content type changes
+    setEducationCount(1); // Reset experience count when content type changes
   };
 
   const handleInputChange = (e) => {
@@ -51,6 +53,7 @@ const AdminForm = () => {
       setFormData({});
       setImageFile(null);
       setExperienceCount(1); // Reset experience count after submission
+      setEducationCount(1); // Reset experience count after submission
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('Failed to add content');
@@ -59,6 +62,9 @@ const AdminForm = () => {
 
   const addExperienceField = () => {
     setExperienceCount(experienceCount + 1);
+  };
+  const addEducationField = () => {
+    setEducationCount(educationCount + 1);
   };
 
   const renderExperienceFields = () => {
@@ -71,6 +77,23 @@ const AdminForm = () => {
             type="text"
             name={`experience${i}`}
             value={formData[`experience${i}`] || ''}
+            onChange={handleInputChange}
+          />
+        </Form.Group>
+      );
+    }
+    return fields;
+  };
+  const renderEducationFields = () => {
+    let fields = [];
+    for (let i = 2; i <= educationCount; i++) {
+      fields.push(
+        <Form.Group controlId={`formEdu${i}`} key={i}>
+          <Form.Label>Education {i}</Form.Label>
+          <Form.Control
+            type="text"
+            name={`education${i}`}
+            value={formData[`education${i}`] || ''}
             onChange={handleInputChange}
           />
         </Form.Group>
@@ -111,6 +134,19 @@ const AdminForm = () => {
                 onChange={handleInputChange}
               />
             </Form.Group>
+            <Form.Group controlId="formEdu1">
+              <Form.Label>Education strarting from Graduation(Ex: Masters in Earth Science (2020-2022))..then Phd and so on</Form.Label>
+              <Form.Control
+                type="text"
+                name="education1"
+                value={formData.education1 || ''}
+                onChange={handleInputChange}
+              />
+              {renderEducationFields()}
+              <Button variant="secondary" onClick={addEducationField} className="mt-2">
+                Add More Education
+              </Button>
+            </Form.Group>
             <Form.Group controlId="formExp1">
               <Form.Label>Experience and Internship (If any)</Form.Label>
               <Form.Control
@@ -119,11 +155,11 @@ const AdminForm = () => {
                 value={formData.experience1 || ''}
                 onChange={handleInputChange}
               />
-            </Form.Group>
             {renderExperienceFields()}
             <Button variant="secondary" onClick={addExperienceField} className="mt-2">
               Add More Experience
             </Button>
+            </Form.Group>
             <Form.Group controlId="formLinkdin">
               <Form.Label>Linkdin Account Link</Form.Label>
               <Form.Control
@@ -276,11 +312,11 @@ const AdminForm = () => {
                 />
               </Form.Group>
               <Form.Group controlId="formJournal">
-                <Form.Label>Journal</Form.Label>
+                <Form.Label>Type of Publication(Book, Journal etc.)</Form.Label>
                 <Form.Control
                   type="text"
-                  name="journal"
-                  value={formData.journal || ''}
+                  name="type"
+                  value={formData.type || ''}
                   onChange={handleInputChange}
                 />
               </Form.Group>
@@ -293,24 +329,15 @@ const AdminForm = () => {
                   onChange={handleInputChange}
                 />
               </Form.Group>
-              <Form.Group controlId="formDescription">
-                <Form.Label>Description</Form.Label>
+              <Form.Group controlId="formLink">
+                <Form.Label>Link where published(example:- Google Scholar)</Form.Label>
                 <Form.Control
-                  as="textarea"
-                  rows={3}
-                  name="description"
-                  value={formData.description || ''}
+                  type="text"
+                  name="link"
+                  value={formData.link || ''}
                   onChange={handleInputChange}
                 />
               </Form.Group>
-              <Form.Group controlId="formImage">
-              <Form.Label>Image</Form.Label>
-              <Form.Control
-                type="file"
-                name="image"
-                onChange={handleFileChange}
-              />
-            </Form.Group>
   
             </>
         );

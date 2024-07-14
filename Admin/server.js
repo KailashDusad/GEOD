@@ -80,7 +80,7 @@ app.post('/api/add-content', upload.single('image'), (req, res) => {
     let newId = 1;
   if (jsonData.length > 0) {
     const lastId = jsonData[jsonData.length - 1].id;
-    newId = lastId + 1;
+    newId = lastId + 3;
   }
   formData.id = newId;
 
