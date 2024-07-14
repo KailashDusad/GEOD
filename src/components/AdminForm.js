@@ -8,11 +8,13 @@ const AdminForm = () => {
   const [selectedOption, setSelectedOption] = useState('');
   const [formData, setFormData] = useState({});
   const [imageFile, setImageFile] = useState(null);
+  const [experienceCount, setExperienceCount] = useState(1); // State to keep track of the number of experiences
 
   const handleOptionChange = (e) => {
     setSelectedOption(e.target.value);
     setFormData({});
     setImageFile(null);
+    setExperienceCount(1); // Reset experience count when content type changes
   };
 
   const handleInputChange = (e) => {
@@ -48,10 +50,33 @@ const AdminForm = () => {
       setSelectedOption('');
       setFormData({});
       setImageFile(null);
+      setExperienceCount(1); // Reset experience count after submission
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('Failed to add content');
     }
+  };
+
+  const addExperienceField = () => {
+    setExperienceCount(experienceCount + 1);
+  };
+
+  const renderExperienceFields = () => {
+    let fields = [];
+    for (let i = 2; i <= experienceCount; i++) {
+      fields.push(
+        <Form.Group controlId={`formExp${i}`} key={i}>
+          <Form.Label>Experience {i}</Form.Label>
+          <Form.Control
+            type="text"
+            name={`experience${i}`}
+            value={formData[`experience${i}`] || ''}
+            onChange={handleInputChange}
+          />
+        </Form.Group>
+      );
+    }
+    return fields;
   };
 
   const renderFormFields = () => {
@@ -68,12 +93,52 @@ const AdminForm = () => {
                 onChange={handleInputChange}
               />
             </Form.Group>
+            <Form.Group controlId="formEmail">
+              <Form.Label>Email</Form.Label>
+              <Form.Control
+                type="email"
+                name="email"
+                value={formData.email || ''}
+                onChange={handleInputChange}
+              />
+            </Form.Group>
             <Form.Group controlId="formRole">
-              <Form.Label>Position</Form.Label>
+              <Form.Label>Position (Exa: PhD Student, Masters)</Form.Label>
               <Form.Control
                 type="text"
                 name="position"
                 value={formData.position || ''}
+                onChange={handleInputChange}
+              />
+            </Form.Group>
+            <Form.Group controlId="formExp1">
+              <Form.Label>Experience and Internship (If any)</Form.Label>
+              <Form.Control
+                type="text"
+                name="experience1"
+                value={formData.experience1 || ''}
+                onChange={handleInputChange}
+              />
+            </Form.Group>
+            {renderExperienceFields()}
+            <Button variant="secondary" onClick={addExperienceField} className="mt-2">
+              Add More Experience
+            </Button>
+            <Form.Group controlId="formLinkdin">
+              <Form.Label>Linkdin Account Link</Form.Label>
+              <Form.Control
+                type="text"
+                name="linkdin"
+                value={formData.linkdin || ''}
+                onChange={handleInputChange}
+              />
+            </Form.Group>
+            <Form.Group controlId="formGate">
+              <Form.Label>Gate Account Link</Form.Label>
+              <Form.Control
+                type="text"
+                name="gate"
+                value={formData.gate || ''}
                 onChange={handleInputChange}
               />
             </Form.Group>
@@ -87,7 +152,7 @@ const AdminForm = () => {
             </Form.Group>
             
             <Form.Group controlId="formBio">
-              <Form.Label>Description</Form.Label>
+              <Form.Label>Research Interests (Ex. Geodynamics, Numerecial Mode ing, Statistical or engineering seismology etc.)</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={3}

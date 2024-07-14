@@ -63,7 +63,7 @@ app.post('/api/add-content', upload.single('image'), (req, res) => {
     default:
       return res.status(400).send('Invalid content type');
   }
-
+  
   fs.readFile(filePath, 'utf8', (err, fileData) => {
     if (err) return res.status(500).send('Error reading file');
 
@@ -77,6 +77,12 @@ app.post('/api/add-content', upload.single('image'), (req, res) => {
         return res.status(500).send('Error parsing JSON');
       }
     }
+    let newId = 1;
+  if (jsonData.length > 0) {
+    const lastId = jsonData[jsonData.length - 1].id;
+    newId = lastId + 1;
+  }
+  formData.id = newId;
 
     jsonData.push(formData);
 
