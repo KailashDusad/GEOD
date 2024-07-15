@@ -21,17 +21,19 @@ const Team = () => {
   }, []);
 
   const TeamInfo = useTeamInfo();
+  // var newP = '';
 
   // Separate members into categories
   const professors = TeamInfo.filter(member => member.position === 'Assistant Professor, Earth Sciences');
   const phdStudents = TeamInfo.filter(member => member.position === 'PhD Student');
   const mastersStudents = TeamInfo.filter(member => member.position === 'Masters');
-  const others = TeamInfo.filter(member => !['Assistant Professor, Earth Sciences', 'PhD Student', 'Masters'].includes(member.position));
+  // const others = TeamInfo.filter(member => !['Assistant Professor, Earth Sciences', 'PhD Student', 'Masters'].includes(member.position));
 
   const filteredProfessors = professors.filter(member => member.name.toLowerCase().includes(searchTerm.toLowerCase()));
   const filteredPhdStudents = phdStudents.filter(member => member.name.toLowerCase().includes(searchTerm.toLowerCase()));
   const filteredMastersStudents = mastersStudents.filter(member => member.name.toLowerCase().includes(searchTerm.toLowerCase()));
-  const filteredOthers = others.filter(member => member.name.toLowerCase().includes(searchTerm.toLowerCase()));
+  // const filteredOthers = others.filter(member => member.name.toLowerCase().includes(searchTerm.toLowerCase()));
+  // newP = others.position;
 
   return (
     <>
@@ -64,7 +66,8 @@ const Team = () => {
                         <Col md={8}>
                           <Card.Body>
                             <Card.Title className="team-card-title">{member.name}</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">{member.position}</Card.Subtitle>
+                            <Card.Subtitle className="mb-1 text-muted">{member.position}</Card.Subtitle>
+                            {/* <Card.Subtitle className="mb-1 text-muted">{member.year}</Card.Subtitle> */}
                             <Card.Text>{member.description}</Card.Text>
                           </Card.Body>
                         </Col>
@@ -89,7 +92,8 @@ const Team = () => {
                         <Col md={8}>
                           <Card.Body>
                             <Card.Title className="team-card-title">{member.name}</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">{member.position}</Card.Subtitle>
+                            <Card.Subtitle className="mb-1 text-muted">{member.position}</Card.Subtitle>
+                            {/* <Card.Subtitle className="mb-1 text-muted">{member.year}</Card.Subtitle> */}
                             <Card.Text>{member.description}</Card.Text>
                           </Card.Body>
                         </Col>
@@ -100,8 +104,8 @@ const Team = () => {
               ))}
             </Row>
           </div>
-          <div className="team-category">
-            <h3>{others[0].position}</h3>
+          {/* <div className="team-category">
+            <h3>{newP}</h3>
             <Row>
               {filteredOthers.map((member, index) => (
                 <Col key={index} xs={12} md={6} className="mb-4">
@@ -124,7 +128,7 @@ const Team = () => {
                 </Col>
               ))}
             </Row>
-          </div>
+          </div> */}
           <div className="team-category">
             <h3>Masters Students</h3>
             <Row>
@@ -139,7 +143,8 @@ const Team = () => {
                         <Col md={8}>
                           <Card.Body>
                             <Card.Title className="team-card-title">{member.name}</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">{member.position}</Card.Subtitle>
+                            <Card.Subtitle className="mb-1 text-muted">{member.position}</Card.Subtitle>
+                            {/* <Card.Subtitle className="mb-1 text-muted">{member.year}</Card.Subtitle> */}
                             <Card.Text>{member.description}</Card.Text>
                           </Card.Body>
                         </Col>

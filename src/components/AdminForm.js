@@ -8,15 +8,15 @@ const AdminForm = () => {
   const [selectedOption, setSelectedOption] = useState('');
   const [formData, setFormData] = useState({});
   const [imageFile, setImageFile] = useState(null);
-  const [experienceCount, setExperienceCount] = useState(1); // State to keep track of the number of experiences
+  const [experienceCount, setExperienceCount] = useState(1); 
   const [educationCount, setEducationCount] = useState(1); 
 
   const handleOptionChange = (e) => {
     setSelectedOption(e.target.value);
     setFormData({});
     setImageFile(null);
-    setExperienceCount(1); // Reset experience count when content type changes
-    setEducationCount(1); // Reset experience count when content type changes
+    setExperienceCount(1);
+    setEducationCount(1); 
   };
 
   const handleInputChange = (e) => {
@@ -37,7 +37,6 @@ const AdminForm = () => {
       data.append('image', imageFile);
     }
 
-    // Debug: Log the FormData contents
     for (const pair of data.entries()) {
       console.log(`${pair[0]}: ${pair[1]}`);
     }
@@ -52,8 +51,8 @@ const AdminForm = () => {
       setSelectedOption('');
       setFormData({});
       setImageFile(null);
-      setExperienceCount(1); // Reset experience count after submission
-      setEducationCount(1); // Reset experience count after submission
+      setExperienceCount(1);
+      setEducationCount(1);
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('Failed to add content');
@@ -126,19 +125,21 @@ const AdminForm = () => {
               />
             </Form.Group>
             <Form.Group controlId="formRole">
-              <Form.Label>Position (Exa: PhD Student, Masters)</Form.Label>
+              <Form.Label>Position</Form.Label>
               <Form.Control
                 type="text"
                 name="position"
+                placeholder='PhD Student, Masters'
                 value={formData.position || ''}
                 onChange={handleInputChange}
               />
             </Form.Group>
             <Form.Group controlId="formEdu1">
-              <Form.Label>Education strarting from Graduation(Ex: Masters in Earth Science (2020-2022))..then Phd and so on</Form.Label>
+              <Form.Label>Education strarting from Graduation</Form.Label>
               <Form.Control
                 type="text"
                 name="education1"
+                placeholder='Masters in Earth Science, Phd ...'
                 value={formData.education1 || ''}
                 onChange={handleInputChange}
               />
@@ -188,10 +189,12 @@ const AdminForm = () => {
             </Form.Group>
             
             <Form.Group controlId="formBio">
-              <Form.Label>Research Interests (Ex. Geodynamics, Numerecial Mode ing, Statistical or engineering seismology etc.)</Form.Label>
+              <Form.Label>Research Interests</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={3}
+                cols={50}
+                placeholder='Ex. Geodynamics, Numerecial Mode ing, Statistical or engineering seismology etc.'
                 name="description"
                 value={formData.description || ''}
                 onChange={handleInputChange}

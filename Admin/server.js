@@ -105,8 +105,6 @@ app.post('/api/authenticate', async (req, res) => {
     else{
       res.status(401).json({message:'Invalid credentials!!'});
     }
-
-
 });
 
 app.get('/api/team', (req, res) => {

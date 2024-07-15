@@ -8,6 +8,7 @@ import '../styles/MemberProfile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faResearchgate } from '@fortawesome/free-brands-svg-icons';
+import { FaArrowLeft } from 'react-icons/fa';
 
 const MemberProfile = () => {
   const { id } = useParams();
@@ -31,10 +32,10 @@ const MemberProfile = () => {
     <>
       <Navbar />
       <Container className="my-5">
-        <Link to="/people" className="back-link" style={{color:'black'}}>&lt; Back to Directory</Link>
+        <Link to="/people" className="back-link" style={{color:'black', textDecoration:'none', display:'flex', alignItems:'center'}}><FaArrowLeft /> &nbsp; Back to Directory</Link>
         <Row className="mt-4">
           <Col md={4}>
-            <img src={require(`../team/${member.image}`)} alt={member.name} className="img-fluid rounded" />
+            <img src={require(`../team/${member.image}`)} alt={member.name} className="mt-5 img-fluid rounded" />
           </Col>
           <Col md={8}>
             <h2>{member.name}</h2>

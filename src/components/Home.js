@@ -46,7 +46,7 @@ const Home = () => {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block w-100" src={heroImage3} alt="Third slide" />
+            <img className="d-block w-100" src={groupPhoto} alt="Third slide" />
             <Carousel.Caption>
               <h3>Comprehensive Datasets</h3>
               <p>Access comprehensive datasets used in our research.</p>

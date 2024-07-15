@@ -33,6 +33,7 @@ const Publications = () => {
     const matchesType = selectedType === "All" || publication.type === selectedType;
     const matchesYear = selectedYear === "All" || publication.year === parseInt(selectedYear);
     const matchesAuthor = selectedAuthor === "All" || publication.authors.toLowerCase().includes(selectedAuthor.toLowerCase());
+    // const matchesAuthor = selectedAuthor === "All" || publication.authors === selectedAuthor;
     return matchesType && matchesYear && matchesAuthor;
   });
 
@@ -81,13 +82,28 @@ const Publications = () => {
               <Form.Group controlId="searchAuthor">
                 <Form.Label>Author</Form.Label>
                 <Form.Control
+                  as = "select"
+                  value={selectedAuthor}
+                  onChange={(e) => setSelectedAuthor(e.target.value)}
+                >
+                  <option>All</option>
+                  {[...new Set(publicationData.flatMap((pub) => pub.authors.split(', ')))].map((author, index) => (
+                    <option key={index}>{author}</option>
+                  ))}
+                </Form.Control>
+              </Form.Group>
+            </Col>
+            {/* <Col md={4}>
+              <Form.Group controlId="searchAuthor">
+                <Form.Label>Author</Form.Label>
+                <Form.Control
                   type="text"
                   placeholder="Search by author"
                   value={selectedAuthor}
                   onChange={(e) => setSelectedAuthor(e.target.value)}
                 />
               </Form.Group>
-            </Col>
+            </Col> */}
           </Row>
           {/* <InputGroup>
             <Form.Control
@@ -104,7 +120,7 @@ const Publications = () => {
               <div className="publication-entry">
                 <div className="publication-index">{index + 1}.</div>
                 <div className="publication-content">
-                  <a href={publication.link} className='hvr-underline-from-center1' style={{textDecoration:'none'}} target="_blank" rel="noopener noreferrer">
+                  <a href={publication.link} className='' style={{textDecoration:'none'}} target="_blank" rel="noopener noreferrer">
                     {publication.title}
                   </a>
                 </div>
