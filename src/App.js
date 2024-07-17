@@ -13,7 +13,7 @@ import CheckA from './components/CheckA';
 import Login from './components/Login';
 import MemberProfile from './components/MemberProfile';
 import Loader from './components/Loader';
-
+import PublicationType from './components/PublicationType'
 function App() {
   return (
     <>
@@ -32,6 +32,7 @@ function App() {
         <Route path='/admin' element={<Login />} />
         <Route path="/profile/:id" element={<MemberProfile />} />
         <Route path="/load" element={<Loader />} />
+        <Route path="/publications/:type" element={<PublicationType />} />
       </Routes>
     </Router>
     {/* <Footer /> */}

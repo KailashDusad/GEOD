@@ -66,7 +66,9 @@ const Footer = () => {
                 </Row>
                 <Row className="mt-3 text-center">
                     <Col>
-                        <p className="mb-0">© 2024 GEOD IITGN. All rights reserved</p>
+                    <span style={{fontSize:'16px', float:'right', clear:'both'}}>Designed & Developed by <i>Kailash Dusad</i></span>
+                        <p className="mb-0">© 2024 GEOD IITGN. All rights reserved.</p>
+                        
                     </Col>
                 </Row>
             </Container>

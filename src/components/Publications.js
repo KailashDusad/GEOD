@@ -72,7 +72,7 @@ const Publications = () => {
                   onChange={(e) => setSelectedYear(e.target.value)}
                 >
                   <option>All</option>
-                  {[...new Set(publicationData.map((pub) => pub.year))].map((year, index) => (
+                  {[...new Set(publicationData.map((pub) => pub.year))].sort().map((year, index) => (
                     <option key={index}>{year}</option>
                   ))}
                 </Form.Control>
@@ -120,7 +120,7 @@ const Publications = () => {
               <div className="publication-entry">
                 <div className="publication-index">{index + 1}.</div>
                 <div className="publication-content">
-                  <a href={publication.link} className='' style={{textDecoration:'none'}} target="_blank" rel="noopener noreferrer">
+                  <a href={publication.link} className='' style={{textDecoration:'none', color:'black'}} target="_blank" rel="noopener noreferrer">
                     {publication.title}
                   </a>
                 </div>
