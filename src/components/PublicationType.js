@@ -27,6 +27,22 @@ const Publications = () => {
     const matchesAuthor = selectedAuthor === "All" || publication.authors.toLowerCase().includes(selectedAuthor.toLowerCase());
     return matchesType && matchesYear && matchesAuthor;
   });
+  function getFontSize() {
+    const screenWidth = window.innerWidth;
+    let fontSize = "1rem";
+    if (screenWidth <= 576) {
+      fontSize = "0.8rem";
+    } else if (screenWidth <= 768) {
+      fontSize = "0.9rem";
+    } else if (screenWidth <= 992) {
+      fontSize = "1rem";
+    } else if (screenWidth <= 1200) {
+      fontSize = "1.2rem";
+    } else {
+      fontSize = "1.4rem";
+    }
+    return fontSize;
+  }
 
   return (
     <>
@@ -75,7 +91,7 @@ const Publications = () => {
               <Col key={index} xs={12}>
                 <div className="publication-entry">
                   <div className="publication-index">{index + 1}.</div>
-                  <div className="publication-content">
+                  <div className="publication-content" style={{ fontSize: `${getFontSize()}` }}>
                     <a href={publication.link} className='' style={{ textDecoration: 'none', color: 'black' }} target="_blank" rel="noopener noreferrer">
                       {publication.title}
                     </a>
@@ -89,6 +105,8 @@ const Publications = () => {
     <Footer />
     </>
   );
+
+  
 };
 
 export default Publications;

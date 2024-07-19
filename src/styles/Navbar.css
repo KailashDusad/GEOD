@@ -34,3 +34,51 @@
     margin-left: 25rem;
   }
 }
+
+#publications-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+#publications-dropdown .dropdown-menu {
+  display: none;
+}
+
+#publications-dropdown .dropdown-menu {
+  background-color: #f8f9fa; 
+  border: 1px solid #dee2e6; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+#publications-dropdown .dropdown-item {
+  font-size: 1rem; 
+  color: black; 
+}
+
+#publications-dropdown .dropdown-item:hover {
+  background-color: #e9ecef; 
+}
+.hover-display #basic-nav-dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1000;
+  min-width: 160px;
+  padding: 10px 0;
+}
+
+.hover-display:hover #basic-nav-dropdown {
+  display: block;
+}
+
+.hover-display #basic-nav-dropdown .nav-link {
+  display: block;
+  padding: 8px 16px;
+  color: black;
+}
+
+.hover-display #basic-nav-dropdown .nav-link:hover {
+  background-color: #f8f9fa;
+  color: black;
+}

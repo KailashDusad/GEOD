@@ -36,6 +36,22 @@ const Publications = () => {
     // const matchesAuthor = selectedAuthor === "All" || publication.authors === selectedAuthor;
     return matchesType && matchesYear && matchesAuthor;
   });
+  function getFontSize() {
+    const screenWidth = window.innerWidth;
+    let fontSize = "1rem";
+    if (screenWidth <= 576) {
+      fontSize = "0.8rem";
+    } else if (screenWidth <= 768) {
+      fontSize = "0.9rem";
+    } else if (screenWidth <= 992) {
+      fontSize = "1rem";
+    } else if (screenWidth <= 1200) {
+      fontSize = "1.2rem";
+    } else {
+      fontSize = "1.4rem";
+    }
+    return fontSize;
+  }
 
   return (
     <>
@@ -48,13 +64,13 @@ const Publications = () => {
         <Form style={{border:'none'}}>
           <Row className="">
             <Col md={4}>
-              <Form.Group controlId="searchType">
+              <Form.Group controlId="searchType" >
                 <Form.Label>Select Type</Form.Label>
                 <Form.Control
                   as="select"
                   value={selectedType}
                   onChange={(e) => setSelectedType(e.target.value)}
-                >
+                  >
                   <option>All</option>
                   {/* Add options dynamically based on publication types */}
                   {[...new Set(publicationData.map((pub) => pub.type))].map((type, index) => (
@@ -64,13 +80,13 @@ const Publications = () => {
               </Form.Group>
             </Col>
             <Col md={4}>
-              <Form.Group controlId="searchYear">
+              <Form.Group controlId="searchYear" >
                 <Form.Label>Year</Form.Label>
                 <Form.Control
                   as="select"
                   value={selectedYear}
                   onChange={(e) => setSelectedYear(e.target.value)}
-                >
+                  >
                   <option>All</option>
                   {[...new Set(publicationData.map((pub) => pub.year))].sort().map((year, index) => (
                     <option key={index}>{year}</option>
@@ -79,13 +95,13 @@ const Publications = () => {
               </Form.Group>
             </Col>
             <Col md={4}>
-              <Form.Group controlId="searchAuthor">
+              <Form.Group controlId="searchAuthor" >
                 <Form.Label>Author</Form.Label>
                 <Form.Control
                   as = "select"
                   value={selectedAuthor}
                   onChange={(e) => setSelectedAuthor(e.target.value)}
-                >
+                  >
                   <option>All</option>
                   {[...new Set(publicationData.flatMap((pub) => pub.authors.split(', ')))].map((author, index) => (
                     <option key={index}>{author}</option>
@@ -93,33 +109,14 @@ const Publications = () => {
                 </Form.Control>
               </Form.Group>
             </Col>
-            {/* <Col md={4}>
-              <Form.Group controlId="searchAuthor">
-                <Form.Label>Author</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Search by author"
-                  value={selectedAuthor}
-                  onChange={(e) => setSelectedAuthor(e.target.value)}
-                />
-              </Form.Group>
-            </Col> */}
           </Row>
-          {/* <InputGroup>
-            <Form.Control
-              type="text"
-              placeholder="Search by title"
-              value={searchQuery}
-              onChange={handleSearch}
-            />
-          </InputGroup> */}
         </Form>
         <Row className="gy-4 mt-4" >
           {filteredPublications.map((publication, index) => (
             <Col key={index} xs={12}>
               <div className="publication-entry">
                 <div className="publication-index">{index + 1}.</div>
-                <div className="publication-content">
+                <div className="publication-content" style={{ fontSize: `${getFontSize()}` }}>
                   <a href={publication.link} className='' style={{textDecoration:'none', color:'black'}} target="_blank" rel="noopener noreferrer">
                     {publication.title}
                   </a>
@@ -133,6 +130,8 @@ const Publications = () => {
       <Footer />
     </>
   );
+
+  
 };
 
 export default Publications;

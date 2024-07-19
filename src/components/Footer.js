@@ -39,8 +39,7 @@ const Footer = () => {
                     </Col>
                     <Col md={5}>
                         <Row>
-                        
-                            <Col md={4} xs={6}>
+                            <Col md={4} xs={4}>
                                 <h6>Quick links</h6>
                                 <ul className="list-unstyled">
                                     <li><a className='hvr-underline-from-center-footer' href="/">Home</a></li>
@@ -50,7 +49,7 @@ const Footer = () => {
                                     <li><a className='hvr-underline-from-center-footer' href="/publications">Publications</a></li>
                                 </ul>
                             </Col>
-                            <Col md={4} xs={6}>
+                            <Col md={4} xs={4}>
                                 <ul className="list-unstyled mt-md-4">
                                     <li><a className='hvr-underline-from-center-footer' target='_blank' href="https://iitgn.ac.in">IITGN</a></li>
                                     <li><a className='hvr-underline-from-center-footer' href="/people">People</a></li>
