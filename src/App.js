@@ -28,10 +28,10 @@ function App() {
         <Route path='/publications' element={<Publications />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/datasets/:id' element={<DatasetDetail />} />
-        <Route path='/check' element={<CheckA />} />
+        {/* <Route path='/check' element={<CheckA />} /> */}
         <Route path='/admin' element={<Login />} />
         <Route path="/profile/:id" element={<MemberProfile />} />
-        <Route path="/load" element={<Loader />} />
+        {/* <Route path="/load" element={<Loader />} /> */}
         <Route path="/publications/:type" element={<PublicationType />} />
       </Routes>
     </Router>

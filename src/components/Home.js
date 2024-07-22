@@ -35,13 +35,13 @@ const Home = () => {
 
   const getFontSize = () => {
     if (windowWidth >= 1200) {
-      return '2rem';
-    } else if (windowWidth >= 992) {
       return '1.8rem';
-    } else if (windowWidth >= 768) {
+    } else if (windowWidth >= 992) {
       return '1.6rem';
-    } else if (windowWidth >= 576) {
+    } else if (windowWidth >= 768) {
       return '1.4rem';
+    } else if (windowWidth >= 576) {
+      return '1.2rem';
     } else {
       return '1.2rem';
     }

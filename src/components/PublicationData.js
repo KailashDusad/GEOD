@@ -43,8 +43,11 @@ const usePublication = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      const host = window.location.hostname;
+      const url = `http://${host}:5000/api/publications`;
       try {
-        const response = await axios.get('http://localhost:5000/api/publications');
+        // const response = await axios.get('http://localhost:5000/api/publications');
+        const response = await axios.get(url);
         setPublication(response.data);
         
       } catch (error) {

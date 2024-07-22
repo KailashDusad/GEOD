@@ -38,8 +38,10 @@ const useDataset = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      const host = window.location.hostname;
+      const url = `http://${host}:5000/api/datasets`;
       try {
-        const response = await axios.get('http://localhost:5000/api/datasets');
+        const response = await axios.get(url);
         setDataset(response.data);
       } catch (error) {
         console.error('Error fetching Dataset data', error);

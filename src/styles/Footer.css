@@ -11,6 +11,12 @@
   justify-content: center;
   align-items: center;
   border: 2px solid black;
+  
+}
+#btn-circle {
+  position: fixed;
+  bottom: 15%;
+  right: 2%;
 }
 #btn-circle:hover {
   background-color: black; 

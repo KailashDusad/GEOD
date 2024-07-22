@@ -33,8 +33,11 @@ const useReasearch = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      const host = window.location.hostname;
+      const url = `http://${host}:5000/api/research`;
       try {
-        const response = await axios.get('http://localhost:5000/api/research');
+        // const response = await axios.get('http://localhost:5000/api/research');
+        const response = await axios.get(url);
         setReasearch(response.data);
       } catch (error) {
         console.error('Error fetching Research data', error);
@@ -43,6 +46,7 @@ const useReasearch = () => {
 
     fetchData();
   }, []);
+
 
   return Reasearch;
 };

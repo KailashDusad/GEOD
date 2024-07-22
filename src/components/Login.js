@@ -26,9 +26,10 @@ const Login = () => {
         e.preventDefault();
         const username = e.target.username.value;
         const password = e.target.password.value;
-    
+        const host = window.location.hostname;
+        const url = `http://${host}:5000/api/authenticate`;
         try {
-            const response = await fetch('http://localhost:5000/api/authenticate', {
+            const response = await fetch(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

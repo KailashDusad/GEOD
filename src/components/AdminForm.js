@@ -40,9 +40,10 @@ const AdminForm = () => {
     for (const pair of data.entries()) {
       console.log(`${pair[0]}: ${pair[1]}`);
     }
-
+    const host = window.location.hostname;
+    const url = `http://${host}:5000/api/add-content`;
     try {
-      await axios.post('http://localhost:5000/api/add-content', data, {
+      await axios.post(url, data, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

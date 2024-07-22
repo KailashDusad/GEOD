@@ -80,8 +80,11 @@ const useTeamInfo = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      const host = window.location.hostname;
+      const url = `http://${host}:5000/api/team`;
       try {
-        const response = await axios.get('http://localhost:5000/api/team');
+        // const response = await axios.get('http://localhost:5000/api/team');
+        const response = await axios.get(url);
         setTeamInfo(response.data);
       } catch (error) {
         console.error('Error fetching team data', error);

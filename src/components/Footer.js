@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import logoBlack from '../assets/logo_black.png';
 import name from '../assets/logo-no-background.png';
 import '../styles/Footer.css';
-import { FaArrowUp } from 'react-icons/fa';
+import { FaArrowUp, FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
+    const [showScroll, setShowScroll] = useState(false);
+
+    const checkScrollTop = () => {
+        if (!showScroll && window.pageYOffset > 400){
+            setShowScroll(true);
+        } else if (showScroll && window.pageYOffset <= 400){
+            setShowScroll(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', checkScrollTop);
+        return () => {
+            window.removeEventListener('scroll', checkScrollTop);
+        };
+    }, [showScroll]);
+
     return (
         <>
-        <footer className="footer bg-light">
+        {showScroll && 
             <a href="#top" style={{float:'right'}} id='btn-circle' className="btn btn-floating" role="button">
                 <FaArrowUp />
             </a>
+        }
+        <footer className="footer bg-light">
             <Container>
                 <Row className="pt-4">
                     <Col md={6} className="text-md-left">
@@ -41,33 +60,31 @@ const Footer = () => {
                         <Row>
                             <Col md={4} xs={4}>
                                 <h6>Quick links</h6>
+                                <div style={{display:'flex'}}>
                                 <ul className="list-unstyled">
                                     <li><a className='hvr-underline-from-center-footer' href="/">Home</a></li>
                                     <li><a className='hvr-underline-from-center-footer' href="/research">Research Areas</a></li>
                                     <li><a className='hvr-underline-from-center-footer' href="/data">Data</a></li>
-                                    {/* <li><a className='hvr-underline-from-center-footer' href="#">News</a></li> */}
                                     <li><a className='hvr-underline-from-center-footer' href="/publications">Publications</a></li>
                                 </ul>
-                            </Col>
-                            <Col md={4} xs={4}>
-                                <ul className="list-unstyled mt-md-4">
+                                <ul className="list-unstyled" style={{marginLeft:'30px'}}>
                                     <li><a className='hvr-underline-from-center-footer' target='_blank' href="https://iitgn.ac.in">IITGN</a></li>
                                     <li><a className='hvr-underline-from-center-footer' href="/people">People</a></li>
                                     <li><a className='hvr-underline-from-center-footer' href="/contact">Contact Us</a></li>
                                     <li><a className='hvr-underline-from-center-footer' href="/gallery">Gallery</a></li>
-                                    {/* <li><a href="/drought-monitor">India Drought Monitor</a></li>
-                                    <li><a href="/eflsp">EFLSP (IMD)</a></li> */}
                                 </ul>
+                                </div>
                             </Col>
-                            
+                            <Col md={4} xs={4}>
+                            </Col>
                         </Row>
                     </Col>
                 </Row>
                 <Row className="mt-3 text-center">
                     <Col>
-                    <span style={{fontSize:'16px', float:'right', clear:'both'}}>Designed & Developed by <i>Kailash Dusad</i></span>
+                    <a href="https://github.com/KailashDusad/geod" target='_blank' style={{textDecoration:'none', color:'black'}}>
+                    <span style={{fontSize:'16px', float:'right', clear:'both'}}>Designed & Developed by <i>Kailash Dusad</i> <FaGithub size={20} /></span></a>
                         <p className="mb-0">© 2024 GEOD IITGN. All rights reserved.</p>
-                        
                     </Col>
                 </Row>
             </Container>
