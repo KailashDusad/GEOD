@@ -1,51 +1,115 @@
 import React, { useEffect, useState } from 'react';
 import MyNavbar from './Navbar';
-// import ResearchData from './ResearchData';
-import useReasearch from './ResearchData';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import useResearch from './ResearchData';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import Heading from './Heading';
-import '../styles/Research.css'; 
+import '../styles/Research.css';
 import Footer from './Footer';
 import Loader from './Loader';
 
 const Research = () => {
   const [loading, setLoading] = useState(true);
+  const [showFullText, setShowFullText] = useState(new Array(useResearch().length).fill(false));
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  function getFontSize() {
+    const screenWidth = window.innerWidth;
+    let fontSize = "0.9rem";
+    if (screenWidth <= 576) {
+      fontSize = "0.7rem";
+    } else if (screenWidth <= 768) {
+      fontSize = "0.8rem";
+    } else if (screenWidth <= 992) {
+      fontSize = "0.9rem";
+    } else if (screenWidth <= 1200) {
+      fontSize = "1.1rem";
+    } else {
+      fontSize = "1.3rem";
+    }
+    return fontSize;
+  }
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false); 
     }, 500);
 
-    return () => clearTimeout(timer);
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
-  const ResearchData = useReasearch();
+
+  const researchData = useResearch();
+
+  const toggleText = (index) => {
+    setShowFullText((prevState) => {
+      const newState = [...prevState];
+      newState[index] = !newState[index];
+      return newState;
+    });
+  };
+
+  const formatText = (text, showFull) => {
+    const paragraphs = text.split('\n').filter(paragraph => paragraph.trim() !== '');
+    const truncationLength = windowWidth < 768 ? 400 : 800;
+
+    if (showFull) {
+      return paragraphs.map((paragraph, idx) => <p key={idx} className="paragraph">{paragraph}</p>);
+    }
+
+    const truncatedText = paragraphs.join(' ').substring(0, truncationLength);
+    return (
+      <>
+        {truncatedText}
+        {truncatedText.length < text.length && '...'}
+      </>
+    );
+  };
+
   return (
     <>
       <MyNavbar />
       <Heading headingText="Our Research Projects" />
       {loading ? (
-        <Loader /> 
+        <Loader />
       ) : (
-      <Container className="my-5">
-        <Row className="gy-4">
-          {ResearchData.map((project, index) => (
-            <Col key={index} xs={12} md={6} lg={4}>
-              <Card className="research-card h-100">
-                {/* <Card.Img variant="top" src={project.image} alt={project.title} className="card-img-top" /> */}
-                <Card.Img variant="top" src={require(`../assets/${project.image}`)} alt={project.title} className="card-img-top" />
-                <Card.Body>
-                  <Card.Title>{project.title}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">Lead: {project.lead}</Card.Subtitle>
-                  <Card.Text>{project.description}</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+        <Container className="my-5">
+          <Row className="gy-4">
+            {researchData.map((project, index) => (
+              <Col key={index} xs={12}>
+                <Card className="research-card h-100 shadow-sm">
+                  <div className="card-content">
+                    <Card.Img 
+                      variant="left" 
+                      src={require(`../assets/${project.image}`)} 
+                      alt={project.title} 
+                      className="card-img-left"
+                    />
+                    <Card.Body>
+                      <Card.Title className="text-primary" style={{ fontSize: `${getFontSize()}`}}>{project.title}</Card.Title>
+                      <Card.Text className="text-justify" style={{ fontSize: `${getFontSize()}` }}>
+                        {formatText(project.description, showFullText[index])}
+                      </Card.Text>
+                      {project.description.length > (windowWidth < 768 ? 400 : 800) && (
+                        <Button variant="link" style={{ textDecoration: 'none', backgroundColor: 'blue', color: 'white', fontWeight: '500' }} onClick={() => toggleText(index)}>
+                          {showFullText[index] ? 'Show less' : 'Read more'}
+                        </Button>
+                      )}
+                    </Card.Body>
+                  </div>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Container>
       )}
       <Footer />
-
     </>
   );
 };

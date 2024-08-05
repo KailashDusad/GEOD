@@ -96,7 +96,6 @@ form label {
     background-color: #008ffd;
 }
 
-/* Media Queries */
 @media only screen and (max-width: 768px) {
     form {
         width: 85vw;

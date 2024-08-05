@@ -1,52 +1,60 @@
 .research-card {
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #f8f9fa;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+}
+
+.card-img-left {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 15px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.paragraph {
+  margin-bottom: 1rem;
+}
+
+.btn-link {
+  padding: 0;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  .card-content {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .research-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+  .card-img-left {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
-  
-  .card-img-top {
-    height: 200px;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-  
+
   .card-body {
-    padding: 1.25rem;
+    padding: 15px;
   }
-  
-  .card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #343a40;
+
+  .btn-link {
+    font-size: 0.9rem;
   }
-  
-  .card-subtitle {
-    font-size: 1rem;
-    color: #6c757d;
-  }
-  
-  .card-text {
-    font-size: 0.875rem;
-    color: #495057;
-    margin-top: 0.5rem;
-  }
-  
-  .container {
-    max-width: 1140px;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #343a40;
-    text-align: center;
-  }
-  
+}

@@ -1,20 +1,14 @@
 [
   {
-    "title": "AI in Healthcare",
-    "lead": "Dr. John Doe",
-    "description": "A project exploring the applications of artificial intelligence in the healthcare industry.",
-    "image": "monu4.jpg"
+    "title": "Seismic Hazard Analysis with a Focus on Ground Motion Modelling",
+    "lead": "Utsav Mannu",
+    "description": "Seismic hazard analysis plays a crucial role in understanding and mitigating the risks associated with earthquakes. Our research group is dedicated to advancing this field with a particular focus on ground motion modelling, which is essential for predicting the impact of seismic events on structures and infrastructure. Ground Motion Modelling (GMM) Ground motion equations, commonly referred to as attenuation relations, describe the probability density function of ground motion based on several factors, including the characteristics of the earthquake source (such as magnitude and style of faulting), wave propagation (distance), and site response (site class or VS30). Our approach combines empirical data from past seismic events with state-of-the-art simulation techniques to develop robust models tailored to the unique seismic characteristics of the regions we study. This allows us to provide more accurate predictions of ground motion, which is critical for designing earthquake-resistant structures and for developing risk mitigation strategies. Use of Recorded and Simulated Datasets Our research leverages an extensive database of recorded ground motions, which provides invaluable real-world data on how the ground behaves during an earthquake. In addition, we use simulated datasets generated through advanced computational methods to model potential seismic scenarios that may not yet have been observed. By integrating these two types of datasets, we can create comprehensive and reliable ground motion models that account for a wide range of possible seismic activities. Applications and ImpactThe models we develop are used to inform seismic hazard assessments, guide the development of building codes, and support disaster preparedness and response efforts. Our goal is to enhance the resilience of communities and infrastructure to seismic events, ultimately reducing the potential for loss of life and property damage in earthquake-prone regions. Through our work in seismic hazard analysis and ground motion modelling, we strive to contribute to safer, more resilient societies by providing the tools and knowledge needed to effectively manage earthquake risks.",
+    "image": "GMM.jpg"
   },
   {
-    "title": "Renewable Energy Sources",
-    "lead": "Dr. Jane Smith",
-    "description": "Researching new and innovative renewable energy sources to combat climate change.",
+    "title": "Geodynamic Modelling: Exploring the Earth's Dynamic Processes",
+    "lead": "Utsav Mannu",
+    "description": "Our Geodynamic Modelling research delves into the intricate processes that shape our planet. Geodynamic modelling is a powerful and innovative approach used to simulate and understand the Earth's interior dynamics, including mantle convection, plate tectonics, and volcanic activity. By integrating principles from physics, mathematics, and computational science, our research seeks to uncover the fundamental mechanisms driving geological phenomena and their impact on the Earth's surface over geological timescales. Our team employs cutting-edge technology and advanced computational techniques to create detailed models that replicate the complex behavior of the Earth's interior. These models help us investigate various processes, such as the movement of tectonic plates, the formation of mountain ranges, and the occurrence of earthquakes and volcanic eruptions. Through our simulations, we can predict how these processes have evolved over millions of years and how they might continue to shape the planet in the future. By studying the Earth's dynamic processes, we aim to enhance our understanding of natural hazards, resource distribution, and environmental changes. Our research provides valuable insights that can inform policy-making, improve disaster preparedness, and contribute to sustainable resource management. We collaborate with scientists from diverse disciplines and institutions worldwide, fostering a comprehensive and interdisciplinary approach to solving some of the most pressing challenges in Earth sciences. Join us as we explore the dynamic forces that have sculpted our planet and continue to influence its future. Together, we can unravel the mysteries of the Earth's interior and contribute to a deeper understanding of the world we live in.",
     "image": "monu5.jpg"
-  },
-  {
-    "title": "Quantum Computing",
-    "lead": "Dr. Emily Johnson",
-    "description": "Investigating the potential of quantum computing and its future applications.",
-    "image": "monu6.jpg"
   }
 ]
