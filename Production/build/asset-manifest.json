@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4b1b0f81.css",
+    "main.js": "/static/js/main.f5b70ee6.js",
+    "static/js/453.054b3df7.chunk.js": "/static/js/453.054b3df7.chunk.js",
+    "static/media/parvee.png": "/static/media/parvee.9e321a07541a25e6a6d5.png",
+    "static/media/sikha.png": "/static/media/sikha.cc782fcca673514a22a7.png",
+    "static/media/campus9.jpg": "/static/media/campus9.8c3b8096ac22858729c0.jpg",
+    "static/media/omkar.jpg": "/static/media/omkar.89f49933995062342de3.jpg",
+    "static/media/monu4.jpg": "/static/media/monu4.23f6c7f7fa1f1b43d83d.jpg",
+    "static/media/campus1.jpg": "/static/media/campus1.c1e325d56c62afc91df5.jpg",
+    "static/media/monu5.jpg": "/static/media/monu5.9e5408ee20ab542f4481.jpg",
+    "static/media/monu1.jpg": "/static/media/monu1.59460fc8e3ada48a4953.jpg",
+    "static/media/virat.jpg": "/static/media/virat.2677ee5e8898ffa4e21d.jpg",
+    "static/media/g3.jpg": "/static/media/g3.1e25d59517fa80e22b1b.jpg",
+    "static/media/logo_white.png": "/static/media/logo_white.43d07354cbda8d8f0cbb.png",
+    "static/media/logo_black.png": "/static/media/logo_black.db0ca250583d54128941.png",
+    "static/media/g2.jpg": "/static/media/g2.1c5709c4188623796f34.jpg",
+    "static/media/g11.jpg": "/static/media/g11.5f50e4c94eca17e59ed7.jpg",
+    "static/media/saurabh.jpg": "/static/media/saurabh.a9a4b50f9d17fbbfc99b.jpg",
+    "static/media/g12.jpg": "/static/media/g12.b753e9ab240e24d2cd55.jpg",
+    "static/media/g8.jpg": "/static/media/g8.50f63dff5007641d6ebe.jpg",
+    "static/media/utsav.jpeg": "/static/media/utsav.6f17d1b18b760dca0c32.jpeg",
+    "static/media/g9.jpg": "/static/media/g9.f72e69e8016ba3ab9c88.jpg",
+    "static/media/g10.jpg": "/static/media/g10.617ef35473dee45b2077.jpg",
+    "static/media/g7.jpg": "/static/media/g7.b91f31b2386d036a7e6e.jpg",
+    "static/media/g6.jpg": "/static/media/g6.6e3e1b5f0be81dc16617.jpg",
+    "static/media/g5.jpg": "/static/media/g5.b52fb4273e537288eb5e.jpg",
+    "static/media/g1.jpg": "/static/media/g1.abbfa53d1bcd3327c7af.jpg",
+    "static/media/jagroop.jpg": "/static/media/jagroop.df2dd705e1c43fb9ee8a.jpg",
+    "static/media/g4.jpg": "/static/media/g4.45d47c0e1ce3549d3f5c.jpg",
+    "static/media/dakshu.jpg": "/static/media/dakshu.93950b4268e3b83f2c7b.jpg",
+    "static/media/logo-no-background.png": "/static/media/logo-no-background.038474002f00b8b5a443.png",
+    "index.html": "/index.html",
+    "main.4b1b0f81.css.map": "/static/css/main.4b1b0f81.css.map",
+    "main.f5b70ee6.js.map": "/static/js/main.f5b70ee6.js.map",
+    "453.054b3df7.chunk.js.map": "/static/js/453.054b3df7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b1b0f81.css",
+    "static/js/main.f5b70ee6.js"
+  ]
+}
